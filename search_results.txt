@@ -1,0 +1,72 @@
+481:       </div>
+482:     </div>
+483:     <div
+484:       id="formModal"
+485:       class="fixed inset-0 bg-black bg-opacity-60 z-[9999] hidden items-center justify-center p-4 backdrop-blur-sm transition-opacity"
+486:     >
+487:       <div class="bg-white p-6 rounded-3xl w-full max-w-sm shadow-2xl relative">
+488:         <h3 class="font-black text-gray-800 text-base mb-2" id="formModalTitle">
+489:           Form
+490:         </h3>
+491:         <div id="formModalBody" class="space-y-4"></div>
+492:         <div class="flex gap-3 justify-between mt-8">
+493:           <button
+494:             onclick="closeFormModal()"
+495:             class="w-1/2 py-2 border border-[#004aad] text-[#004aad] rounded-full font-bold text-sm hover:bg-blue-50 transition"
+496:           >
+497:             Batal
+498:           </button>
+499:           <button
+500:             id="formModalSubmit"
+501:             class="w-1/2 py-2 bg-[#004aad] hover:bg-blue-800 transition text-white rounded-full font-bold text-sm shadow-md"
+502:           >
+503:             Simpan
+504:           </button>
+505:         </div>
+506:       </div>
+507:     </div>
+508:     <div
+509:       id="loginScreen"
+510:       class="fixed inset-0 bg-[#0f172a] z-40 hidden items-center justify-center p-4"
+511:     >
+512:       <div class="bg-white p-8 rounded-3xl shadow-2xl w-full max-w-sm fade-in">
+513:         <div class="flex justify-center mb-6">
+514:           <div class="p-2">
+515:             <img
+516:               src="https://res.cloudinary.com/donww7xep/image/upload/v1782804261/ChatGPT_Image_28_Jun_2026_21.47.19_nupxu2.png"
+517:               class="w-24 h-24 object-contain"
+518:               alt="Logo SFA"
+519:             />
+520:           </div>
+521:         </div>
+522:         <h2
+523:           class="text-2xl font-black text-center text-gray-800 mb-6 tracking-tight"
+524:         >
+525:           Login SFA
+526:         </h2>
+527:         <div class="space-y-4">
+528:           <div>
+529:             <label class="block text-xs font-bold text-gray-500 mb-1"
+530:               >USERNAME</label
+531:             >
+532:             <input
+533:               type="text"
+534:               id="username"
+535:               class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 font-medium"
+536:               placeholder="admin"
+537:             />
+538:           </div>
+539:           <div>
+540:             <label class="block text-xs font-bold text-gray-500 mb-1"
+541:               >PASSWORD</label
+542:             >
+543:             <input
+544:               type="password"
+545:               id="password"
+546:               class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 font-medium"
+547:               placeholder="admin123"
+548:             />
+549:           </div>
+550:           <button
+551:             id="btnLogin"
+ICON 726:           <i class="fas fa-cog text-gray-400"></i><span>Settings</span>

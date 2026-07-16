@@ -1,0 +1,1707 @@
+<!doctype html>
+<html>
+<head>
+<meta name="chromevox" content-script="no">
+<title><span class=\"app-title-dynamic\">ESRA UTAMA SFA</span></title>
+<meta name="viewport"content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" nonce="dh6FFFl-NDeBaA5Xrbcutg"><link rel="stylesheet" href="/static/macros/client/css/2208734863-mae_html_css_ltr.css">
+<script type="text/javascript" src="/static/macros/client/js/1786111100-warden_bin_i18n_warden__en_gb.js"></script>
+</head>
+<body>
+<table id="warning-bar-table" class="full_size" cellspacing="0" cellpadding="0"><tr><td><div id="warning" class="warning-bar"></div></td></tr><tr><td style="height: 100%"><iframe id="sandboxFrame" title="<span class=\"app-title-dynamic\">ESRA UTAMA SFA</span>" allow="accelerometer *; autoplay *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; local-network-access *; magnetometer *; midi *; payment *; picture-in-picture *; screen-wake-lock *; sync-xhr *; web-share *" sandbox="allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-storage-access-by-user-activation">
+</iframe>
+</td></tr></table><script nonce="5Slr-3ibHAdkFrq2Fq8IYQ">
+(function() {
+var el = document.getElementById('sandboxFrame');
+el.onload = function() {
+goog.script.init("{"functionNames":["batchAppendRows","doGet","attemptLogin","fetchStaticMaster","fetchDynamicData","fetchInitialData","injectOutletToSales","saveOutletNOO","saveMasterStokis","deleteMasterStokis","saveProduct","deleteProduct","saveUser","deleteUser","injectToStokis","injectToSales","injectFromStokisToSales","executeRealArchive","onOpen","setupDatabase"],"sandboxMode":"IFRAME_SANDBOX","callbackTimeout":390000,"deploymentId":"AKfycbxxoaNCXP6qPviOehKZUvGY0rPNTMekYLaogfTSVF81tuJAmLBg-o1yYKjY1fFp5ROxLA","eei":"","sandboxHost":"https:\/\/n-ixa7tcwa6tjzdv52i3abdr3mvoei2nkbs5dmxiy-0lu-script.googleusercontent.com","clientSideProperties":{"google.script.sandbox.mode":"IFRAME_SANDBOX","google.script.host.origin":"https:\/\/docs.google.com"},"actionPrefix":"\/macros\/s\/AKfycbxxoaNCXP6qPviOehKZUvGY0rPNTMekYLaogfTSVF81tuJAmLBg-o1yYKjY1fFp5ROxLA","userHtml":"\x3c!DOCTYPE html>\
+\x3chtml lang=\"id\">\
+\x3chead>\
+    \x3cmeta charset=\"UTF-8\">\
+    \x3cmeta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no\">\
+    \x3ctitle><span class=\"app-title-dynamic\">ESRA UTAMA SFA</span>\x3c\\/title>\
+    \x3cscript src=\"https:\/\/cdn.tailwindcss.com\">\x3c\\/script>\
+    \x3clink rel=\"stylesheet\" href=\"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/font-awesome\/6.4.0\/css\/all.min.css\">\
+    \
+    \x3cstyle>\
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; overflow-x: hidden; }\
+        .glass-nav { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-top: 1px solid rgba(229, 231, 235, 0.5); }\
+        .fade-in { animation: fadeIn 0.3s ease-in-out; }\
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }\
+        .pb-safe { padding-bottom: env(safe-area-inset-bottom, 20px); }\
+        .loader-spinner { border: 4px solid #f3f3f3; border-top: 4px solid #3b82f6; border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite; }\
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }\
+        \
+        .admin-only { display: none !important; }\
+        .sales-only { display: flex !important; }\
+\
+        .admin-table th { background-color: #f8fafc; color: #475569; font-weight: 700; text-transform: uppercase; font-size: 0.75rem; padding: 0.75rem 1rem; border-bottom: 2px solid #e2e8f0; }\
+        .admin-table td { padding: 0.75rem 1rem; border-bottom: 1px solid #f1f5f9; color: #334155; font-size: 0.875rem; vertical-align: middle; }\
+        .admin-table tr:hover { background-color: #f8fafc; }\
+\
+        @media (min-width: 768px) {
+\
+            body.admin-desktop #mainContent { max-width: 100% !important; flex-direction: row !important; background-color: #f3f4f6 !important; border-radius: 0 !important; }\
+            body.admin-desktop #contentArea { flex: 1 !important; z-index: 10; overflow-y: auto; }\
+            body.admin-desktop header { border-radius: 0 !important; background: #ffffff !important; color: #1f2937 !important; padding: 1.5rem 2rem !important; box-shadow: 0 1px 3px rgba(0,0,0,0.05) !important; z-index: 10 !important; border-bottom: 1px solid #e5e7eb; }\
+            body.admin-desktop header p { color: #6b7280 !important; }\
+            body.admin-desktop header h1 { color: #111827 !important; }\
+            body.admin-desktop header .bg-blue-700 { background: #fee2e2 !important; color: #ef4444 !important; box-shadow: none !important; }\
+            body.admin-desktop header .bg-blue-700:hover { background: #fecaca !important; }\
+            body.admin-desktop main { padding: 2rem !important; }\
+            \
+            body.admin-desktop #mainNav { position: relative !important; width: 260px !important; height: 100% !important; flex-direction: column !important; justify-content: flex-start !important; background: #0f172a !important; padding-top: 1.5rem !important; border-top: none !important; backdrop-filter: none !important; z-index: 50 !important; overflow-y: auto;}\
+            \
+            body.admin-desktop .sales-only { display: none !important; }\
+            body.admin-desktop .admin-only { display: flex !important; }\
+\
+            body.admin-desktop .admin-logo-area { display: flex !important; flex-direction: row; align-items: center; justify-content: flex-start; padding: 0 1.5rem 1.5rem 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); margin-bottom: 1rem; width: 100%; gap: 12px; }\
+            body.admin-desktop .nav-btn { flex-direction: row !important; width: calc(100% - 2rem) !important; margin: 0.2rem 1rem !important; padding: 0.8rem 1.2rem !important; justify-content: flex-start !important; color: #94a3b8 !important; text-transform: capitalize; border-radius: 0.75rem; letter-spacing: 0; }\
+            body.admin-desktop .nav-btn span { font-size: 0.85rem !important; margin-left: 1rem !important; font-weight: 600 !important; }\
+            body.admin-desktop .nav-btn i { font-size: 1.1rem !important; width: 20px !important; text-align: center !important; margin-bottom: 0 !important; }\
+            \
+            body.admin-desktop .nav-btn.active-admin-nav { background-color: #1e293b !important; color: #ffffff !important; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); border: 1px solid rgba(255,255,255,0.05); border-right: none !important; }\
+            body.admin-desktop .nav-btn:hover:not(.active-admin-nav) { background-color: rgba(255, 255, 255, 0.03) !important; color: #ffffff !important; }\
+            \
+            body.admin-desktop .tab-content { height: 100%; }\
+        }\
+        \
+        .minimal-scrollbar::-webkit-scrollbar { width: 4px; }\
+        .minimal-scrollbar::-webkit-scrollbar-track { background: transparent; }\
+        .minimal-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }\
+        \
+        .dropdown-menu { display: none; position: absolute; background-color: white; min-width: 120px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1); z-index: 100; border-radius: 0.5rem; border: 1px solid #e5e7eb; overflow: hidden; }\
+        .dropdown-menu a { color: #374151; padding: 10px 16px; text-decoration: none; display: block; font-size: 0.75rem; font-weight: 600; cursor: pointer; }\
+        .dropdown-menu a:hover { background-color: #f1f5f9; }\
+        .show-dropdown { display: block !important; }\
+\
+        .collapse-content { transition: max-height 0.3s ease-out, padding 0.3s ease; max-height: 0; overflow: hidden; padding-top: 0; padding-bottom: 0; }\
+        .collapse-content.expanded { max-height: 1000px; padding-top: 1rem; padding-bottom: 1rem; border-top-width: 1px; }\
+    \x3c\\/style>\
+\x3c\\/head>\
+\x3cbody class=\"text-gray-800 antialiased h-screen flex flex-col relative transition-all duration-300\">\
+\
+    \
+    \x3cdiv id=\"splashScreen\" class=\"fixed inset-0 bg-white z-[9999] flex items-center justify-center transition-opacity duration-500\">\
+        \x3cimg src=\"https:\/\/res.cloudinary.com\/donww7xep\/image\/upload\/v1782804261\/ChatGPT_Image_28_Jun_2026_21.47.19_nupxu2.png\" class=\"w-32 h-32 object-contain drop-shadow-md animate-pulse\" alt=\"Logo\">\
+    \x3c\\/div>\
+\
+    \
+    \x3cdiv id=\"globalLoader\" class=\"fixed inset-0 bg-black bg-opacity-40 z-[9998] hidden items-center justify-center backdrop-blur-sm\">\
+        \x3cdiv class=\"bg-white p-6 rounded-2xl shadow-xl flex flex-col items-center max-w-xs text-center\">\
+            \x3cdiv class=\"loader-spinner mb-4\" id=\"loaderSpinnerIcon\">\x3c\\/div>\
+            \x3cp class=\"font-bold text-gray-700 mb-2\" id=\"loaderText\">Memproses...\x3c\\/p>\
+        \x3c\\/div>\
+    \x3c\\/div>\
+\
+    \
+    \x3cdiv id=\"customAlert\" class=\"fixed inset-0 bg-black bg-opacity-60 z-[9999] hidden items-center justify-center p-4 backdrop-blur-sm transition-opacity\">\
+        \x3cdiv class=\"bg-white p-6 rounded-2xl w-full max-w-xs text-center shadow-2xl\" id=\"alertBox\">\
+            \x3ch3 class=\"font-black text-gray-800 text-lg mb-2\" id=\"alertTitle\">Pesan\x3c\\/h3>\
+            \x3cp class=\"text-sm text-gray-600 mb-6 leading-relaxed whitespace-pre-wrap\" id=\"alertMessage\">Pesan konten\x3c\\/p>\
+            \x3cdiv class=\"flex gap-3 justify-center\" id=\"alertActions\">\x3c\\/div>\
+        \x3c\\/div>\
+    \x3c\\/div>\
+\
+    \
+    \x3cdiv id=\"formModal\" class=\"fixed inset-0 bg-black bg-opacity-60 z-[9999] hidden items-center justify-center p-4 backdrop-blur-sm transition-opacity\">\
+        \x3cdiv class=\"bg-white p-6 rounded-3xl w-full max-w-sm shadow-2xl relative\">\
+            \x3ch3 class=\"font-black text-gray-800 text-base mb-2\" id=\"formModalTitle\">Form\x3c\\/h3>\
+            \x3cdiv id=\"formModalBody\" class=\"space-y-4\">\x3c\\/div>\
+            \x3cdiv class=\"flex gap-3 justify-between mt-8\">\
+                \x3cbutton onclick=\"closeFormModal()\" class=\"w-1\/2 py-2 border border-[#004aad] text-[#004aad] rounded-full font-bold text-sm hover:bg-blue-50 transition\">Batal\x3c\\/button>\
+                \x3cbutton id=\"formModalSubmit\" class=\"w-1\/2 py-2 bg-[#004aad] hover:bg-blue-800 transition text-white rounded-full font-bold text-sm shadow-md\">Simpan\x3c\\/button>\
+            \x3c\\/div>\
+        \x3c\\/div>\
+    \x3c\\/div>\
+\
+    \
+    \x3cdiv id=\"loginScreen\" class=\"fixed inset-0 bg-[#0f172a] z-40 hidden items-center justify-center p-4\">\
+        \x3cdiv class=\"bg-white p-8 rounded-3xl shadow-2xl w-full max-w-sm fade-in\">\
+            \x3cdiv class=\"flex justify-center mb-6\">\
+                \x3cdiv class=\"p-2\">\
+                    \x3cimg src=\"https:\/\/res.cloudinary.com\/donww7xep\/image\/upload\/v1782804261\/ChatGPT_Image_28_Jun_2026_21.47.19_nupxu2.png\" class=\"w-24 h-24 object-contain\" alt=\"Logo SFA\">\
+                \x3c\\/div>\
+            \x3c\\/div>\
+            \x3ch2 class=\"text-2xl font-black text-center text-gray-800 mb-6 tracking-tight\">Login SFA\x3c\\/h2>\
+            \x3cdiv class=\"space-y-4\">\
+                \x3cdiv>\
+                    \x3clabel class=\"block text-xs font-bold text-gray-500 mb-1\">USERNAME\x3c\\/label>\
+                    \x3cinput type=\"text\" id=\"username\" class=\"w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 font-medium\" placeholder=\"admin\">\
+                \x3c\\/div>\
+                \x3cdiv>\
+                    \x3clabel class=\"block text-xs font-bold text-gray-500 mb-1\">PASSWORD\x3c\\/label>\
+                    \x3cinput type=\"password\" id=\"password\" class=\"w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 font-medium\" placeholder=\"admin123\">\
+                \x3c\\/div>\
+                \x3cbutton id=\"btnLogin\" onclick=\"handleLogin()\" class=\"w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-xl shadow-lg transition mt-4\">MASUK\x3c\\/button>\
+            \x3c\\/div>\
+        \x3c\\/div>\
+    \x3c\\/div>\
+\
+    \
+    \x3cdiv id=\"mainContent\" class=\"hidden flex-col h-full w-full max-w-md mx-auto bg-gray-50 relative shadow-2xl overflow-hidden transition-all duration-300\">\
+        \
+        \
+        \x3cnav id=\"mainNav\" class=\"glass-nav absolute bottom-0 w-full px-2 py-3 flex justify-between items-center pb-safe z-30 transition-all duration-300\">\
+            \x3cdiv class=\"admin-only admin-logo-area hidden\">\
+                \x3cdiv class=\"bg-blue-500 rounded-lg p-1.5 flex items-center justify-center\">\x3ci class=\"fas fa-shield-alt text-white text-lg\">\x3c\\/i>\x3c\\/div>\
+                \x3ch2 class=\"text-white font-black text-sm tracking-wider\">SFA CONSOLE\x3c\\/h2>\
+            \x3c\\/div>\
+\
+            \
+            \x3cbutton onclick=\"switchTab('Sales')\" id=\"navSales\" class=\"nav-btn sales-only flex-1 flex flex-col items-center text-blue-600 transition\">\x3ci class=\"fas fa-store text-xl mb-1\">\x3c\\/i>\x3cspan class=\"text-[10px] font-medium mt-1\">Sales\x3c\\/span>\x3c\\/button>\
+            \x3cbutton onclick=\"switchTab('Stock')\" id=\"navStock\" class=\"nav-btn sales-only flex-1 flex flex-col items-center text-gray-400 hover:text-blue-500 transition\">\x3ci class=\"fas fa-box text-xl mb-1\">\x3c\\/i>\x3cspan class=\"text-[10px] font-medium mt-1\">Stock\x3c\\/span>\x3c\\/button>\
+            \x3cbutton onclick=\"switchTab('History')\" id=\"navHistory\" class=\"nav-btn sales-only flex-1 flex flex-col items-center text-gray-400 hover:text-blue-500 transition\">\x3ci class=\"fas fa-history text-xl mb-1\">\x3c\\/i>\x3cspan class=\"text-[10px] font-medium mt-1\">History\x3c\\/span>\x3c\\/button>\
+            \x3cbutton onclick=\"switchTab('Report')\" id=\"navReport\" class=\"nav-btn sales-only flex-1 flex flex-col items-center text-gray-400 hover:text-blue-500 transition\">\x3ci class=\"fas fa-chart-bar text-xl mb-1\">\x3c\\/i>\x3cspan class=\"text-[10px] font-medium mt-1\">Laporan\x3c\\/span>\x3c\\/button>\
+            \x3cbutton onclick=\"switchTab('Sync')\" id=\"navSync\" class=\"nav-btn sales-only flex-1 flex flex-col items-center text-gray-400 hover:text-blue-500 transition relative\">\x3ci class=\"fas fa-sync-alt text-xl mb-1\">\x3c\\/i>\x3cspan class=\"text-[10px] font-medium mt-1\">Sync\x3c\\/span>\x3c\\/button>\
+\
+            \
+            \x3cbutton onclick=\"switchAdminTab('Dashboard')\" id=\"navAdminDashboard\" class=\"nav-btn admin-only hidden transition active-admin-nav\">\x3ci class=\"fas fa-chart-line text-blue-400\">\x3c\\/i>\x3cspan>Dashboard\x3c\\/span>\x3c\\/button>\
+            \
+            \x3cdiv class=\"admin-only hidden w-full px-5 mt-4 mb-2\">\x3cp class=\"text-[10px] font-bold text-gray-500 tracking-widest uppercase\">Master Data\x3c\\/p>\x3c\\/div>\
+            \x3cbutton onclick=\"switchAdminTab('Users')\" id=\"navAdminUsers\" class=\"nav-btn admin-only hidden transition\">\x3ci class=\"fas fa-users text-gray-400\">\x3c\\/i>\x3cspan>Users\x3c\\/span>\x3c\\/button>\
+            \x3cbutton onclick=\"switchAdminTab('Products')\" id=\"navAdminProducts\" class=\"nav-btn admin-only hidden transition\">\x3ci class=\"fas fa-box text-gray-400\">\x3c\\/i>\x3cspan>Products\x3c\\/span>\x3c\\/button>\
+            \x3cbutton onclick=\"switchAdminTab('Outlets')\" id=\"navAdminOutlets\" class=\"nav-btn admin-only hidden transition\">\x3ci class=\"fas fa-store text-gray-400\">\x3c\\/i>\x3cspan>Outlets\x3c\\/span>\x3c\\/button>\
+            \
+            \x3cdiv class=\"admin-only hidden w-full px-5 mt-4 mb-2\">\x3cp class=\"text-[10px] font-bold text-gray-500 tracking-widest uppercase\">Inventory & Penugasan\x3c\\/p>\x3c\\/div>\
+            \x3cbutton onclick=\"switchAdminTab('StockGudang')\" id=\"navAdminStockGudang\" class=\"nav-btn admin-only hidden transition\">\x3ci class=\"fas fa-warehouse text-gray-400\">\x3c\\/i>\x3cspan>Stock Gudang\x3c\\/span>\x3c\\/button>\
+            \x3cbutton onclick=\"switchAdminTab('StockStokis')\" id=\"navAdminStockStokis\" class=\"nav-btn admin-only hidden transition\">\x3ci class=\"fas fa-layer-group text-gray-400\">\x3c\\/i>\x3cspan>Stock Stokis\x3c\\/span>\x3c\\/button>\
+            \x3cbutton onclick=\"switchAdminTab('InjectOutlets')\" id=\"navAdminInjectOutlets\" class=\"nav-btn admin-only hidden transition\">\x3ci class=\"fas fa-route text-gray-400\">\x3c\\/i>\x3cspan>Inject Outlets\x3c\\/span>\x3c\\/button>\
+            \x3cbutton onclick=\"switchAdminTab('InjectStock')\" id=\"navAdminInjectStock\" class=\"nav-btn admin-only hidden transition\">\x3ci class=\"fas fa-bolt text-gray-400\">\x3c\\/i>\x3cspan>Inject Stock\x3c\\/span>\x3c\\/button>\
+            \
+            \x3cdiv class=\"admin-only hidden w-full px-5 mt-4 mb-2\">\x3cp class=\"text-[10px] font-bold text-gray-500 tracking-widest uppercase\">Sistem & Laporan\x3c\\/p>\x3c\\/div>\
+            \x3cbutton onclick=\"switchAdminTab('RawData')\" id=\"navAdminRawData\" class=\"nav-btn admin-only hidden transition\">\x3ci class=\"fas fa-list text-gray-400\">\x3c\\/i>\x3cspan>History Transaksi\x3c\\/span>\x3c\\/button>\
+            \x3cbutton onclick=\"switchAdminTab('LogGudang')\" id=\"navAdminLogGudang\" class=\"nav-btn admin-only hidden transition\">\x3ci class=\"fas fa-clipboard-list text-gray-400\">\x3c\\/i>\x3cspan>Log Gudang\x3c\\/span>\x3c\\/button>\
+            \x3cbutton onclick=\"switchAdminTab('SystemHealth')\" id=\"navAdminSystemHealth\" class=\"nav-btn admin-only hidden transition\">\x3ci class=\"fas fa-shield-alt text-gray-400\">\x3c\\/i>\x3cspan>System Health\x3c\\/span>\x3c\\/button>\
+            \x3cbutton onclick=\"switchAdminTab('Settings')\" id=\"navAdminSettings\" class=\"nav-btn admin-only hidden transition\">\x3ci class=\"fas fa-cog text-gray-400\">\x3c\\/i>\x3cspan>Settings\x3c\\/span>\x3c\\/button>\
+        \x3c\\/nav>\
+\
+        \x3cdiv id=\"contentArea\" class=\"flex-1 flex flex-col w-full h-full relative overflow-hidden transition-all duration-300\">\
+            \
+            \x3cheader class=\"bg-[#1d4ed8] text-white p-5 rounded-b-[2rem] shadow-md z-10 relative flex-shrink-0 transition-colors duration-300\">\
+                \x3cdiv class=\"flex justify-between items-center mb-2\">\
+                    \x3cdiv>\
+                        \x3cp class=\"text-[11px] text-blue-200 font-medium tracking-widest uppercase\">Selamat Datang,\x3c\\/p>\
+                        \x3ch1 class=\"text-2xl font-black truncate max-w-[200px]\" id=\"userNameDisplay\">User\x3c\\/h1>\
+                        \x3cspan id=\"userRoleBadge\" class=\"inline-block bg-blue-500\/50 px-2 py-0.5 rounded-full text-[10px] mt-1 border border-blue-400\">Role\x3c\\/span>\
+                    \x3c\\/div>\
+                    \x3cdiv class=\"flex items-center gap-2\">\
+                        \x3cbutton onclick=\"logout()\" class=\"bg-blue-700 hover:bg-red-500 text-white w-10 h-10 rounded-full flex items-center justify-center transition shadow-inner\" title=\"Logout\">\x3ci class=\"fas fa-sign-out-alt text-sm\">\x3c\\/i>\x3c\\/button>\
+                    \x3c\\/div>\
+                \x3c\\/div>\
+            \x3c\\/header>\
+\
+            \x3cmain class=\"flex-1 overflow-y-auto p-4 pb-32 scroll-smooth\">\
+                \
+                \
+                \x3cdiv id=\"tabSales\" class=\"tab-content fade-in block\">\
+                    \x3cdiv class=\"bg-white p-4 rounded-2xl shadow-sm border border-gray-100 mb-4\">\
+                        \x3ch3 class=\"font-black text-gray-800 text-[13px] mb-4\">Pilih Outlet untuk Memulai\x3c\\/h3>\
+                        \
+                        \x3cdiv class=\"flex bg-[#f1f5f9] rounded-full mb-5 relative overflow-hidden\">\
+                            \x3cbutton id=\"btnTabRegular\" onclick=\"switchSalesSubTab('Regular')\" class=\"flex-1 py-2 text-[11px] font-black bg-[#1d4ed8] text-white rounded-full transition-colors z-10 shadow-sm\">Regular\x3c\\/button>\
+                            \x3cbutton id=\"btnTabNOO\" onclick=\"switchSalesSubTab('NOO')\" class=\"flex-1 py-2 text-[11px] font-bold text-gray-500 transition-colors z-10 rounded-full\">NOO\x3c\\/button>\
+                        \x3c\\/div>\
+\
+                        \
+                        \x3cdiv id=\"salesRegularContent\">\
+                            \x3cdiv class=\"flex items-center mb-3\">\
+                                \x3ci class=\"fas fa-store text-blue-600 mr-2 text-sm\">\x3c\\/i>\
+                                \x3ch4 class=\"font-bold text-gray-800 text-sm\">Daftar Rute Hari Ini\x3c\\/h4>\
+                            \x3c\\/div>\
+                            \x3cdiv id=\"outletList\" class=\"mt-2 space-y-2 pb-2 text-sm text-gray-500\">\
+                                \x3cp class=\"italic text-gray-400 text-center py-4 text-xs\">Belum ada rute ter-inject untuk Anda hari ini.\x3c\\/p>\
+                            \x3c\\/div>\
+                        \x3c\\/div>\
+\
+                        \
+                        \x3cdiv id=\"salesNOOContent\" class=\"hidden\">\
+                            \x3ch4 class=\"text-xs font-bold text-blue-800 mb-3 ml-1\">Daftarkan Outlet NOO Baru\x3c\\/h4>\
+                            \x3cdiv class=\"space-y-3\">\
+                                \x3cdiv class=\"border border-gray-300 rounded-md p-2.5\">\
+                                    \x3cinput type=\"text\" id=\"nooName\" placeholder=\"Nama Outlet Baru\" class=\"w-full text-xs font-bold text-gray-800 outline-none bg-transparent placeholder-gray-400\">\
+                                \x3c\\/div>\
+                                \x3cdiv class=\"border border-gray-300 rounded-md p-2.5\">\
+                                    \x3cinput type=\"text\" id=\"nooAddress\" placeholder=\"Patokan Jalan (Opsional)\" class=\"w-full text-xs font-bold text-gray-800 outline-none bg-transparent placeholder-gray-400\">\
+                                \x3c\\/div>\
+                                \x3cdiv class=\"border border-gray-300 rounded-md p-2.5 relative\">\
+                                    \x3cselect id=\"nooDay\" class=\"w-full text-xs font-bold text-gray-800 outline-none bg-transparent appearance-none\">\
+                                        \x3coption value=\"SENIN1\">SENIN1\x3c\\/option>\x3coption value=\"SENIN2\">SENIN2\x3c\\/option>\
+                                        \x3coption value=\"SELASA1\">SELASA1\x3c\\/option>\x3coption value=\"SELASA2\">SELASA2\x3c\\/option>\
+                                        \x3coption value=\"RABU1\">RABU1\x3c\\/option>\x3coption value=\"RABU2\">RABU2\x3c\\/option>\
+                                        \x3coption value=\"KAMIS1\">KAMIS1\x3c\\/option>\x3coption value=\"KAMIS2\">KAMIS2\x3c\\/option>\
+                                        \x3coption value=\"JUMAT1\">JUMAT1\x3c\\/option>\x3coption value=\"JUMAT2\">JUMAT2\x3c\\/option>\
+                                        \x3coption value=\"SABTU1\">SABTU1\x3c\\/option>\x3coption value=\"SABTU2\">SABTU2\x3c\\/option>\
+                                        \x3coption value=\"MINGGU1\">MINGGU1\x3c\\/option>\x3coption value=\"MINGGU2\">MINGGU2\x3c\\/option>\
+                                    \x3c\\/select>\
+                                    \x3ci class=\"fas fa-caret-down absolute right-3 top-3 text-gray-500 text-xs\">\x3c\\/i>\
+                                \x3c\\/div>\
+                                \x3cdiv class=\"text-center pt-2\">\
+                                    \x3cbutton id=\"btnGeotag\" onclick=\"getGeotag()\" class=\"text-red-600 text-[10px] font-bold py-2 hover:text-red-700 transition\">\
+                                        \x3ci class=\"fas fa-crosshairs mr-1\">\x3c\\/i> Ambil Geotag Location\
+                                    \x3c\\/button>\
+                                    \x3cinput type=\"hidden\" id=\"nooGeotagVal\" value=\"\">\
+                                \x3c\\/div>\
+                                \x3cbutton onclick=\"submitNOO()\" class=\"w-full bg-[#1d4ed8] hover:bg-blue-800 text-white font-bold py-3 rounded-lg shadow-md transition text-xs flex items-center justify-center mt-2\">\
+                                    \x3ci class=\"fas fa-check mr-2\">\x3c\\/i> Konfirmasi NOO\
+                                \x3c\\/button>\
+                            \x3c\\/div>\
+                        \x3c\\/div>\
+\
+                    \x3c\\/div>\
+                \x3c\\/div>\
+\
+                \
+                \x3cdiv id=\"tabStock\" class=\"tab-content fade-in hidden\">\
+                    \x3cdiv class=\"bg-white p-4 rounded-2xl shadow-sm border border-gray-100 min-h-full\">\
+                        \x3cdiv class=\"flex justify-between items-center mb-4 border-b pb-2\">\
+                            \x3ch3 class=\"font-bold text-gray-800\">\x3ci class=\"fas fa-cubes text-blue-500 mr-2\">\x3c\\/i>Stock Sales Harian\x3c\\/h3>\
+                        \x3c\\/div>\
+                        \x3cdiv id=\"stockListContainer\" class=\"space-y-2 text-sm text-gray-500 mb-6\">\
+                            Lakukan sinkronisasi untuk menarik data stok dari server.\
+                        \x3c\\/div>\
+\
+                        \
+                        \x3cdiv id=\"selfInjectSection\" class=\"hidden border-t border-gray-200 pt-5 mt-2\">\
+                            \x3ch3 class=\"font-black text-gray-800 mb-2 text-sm\">\x3ci class=\"fas fa-download text-green-500 mr-2\">\x3c\\/i>Tarik Stok Gudang Cabang\x3c\\/h3>\
+                            \x3cp class=\"text-[10px] text-gray-500 mb-4 leading-tight\">Anda memiliki otoritas. Anda dapat menginjeksi stok ke Mobil secara mandiri langsung dari Gudang Cabang Anda.\x3c\\/p>\
+                            \
+                            \x3cp class=\"text-[10px] font-bold text-blue-600 mb-3\" id=\"selfInjectProductCount\">0 Produk Dipilih\x3c\\/p>\
+                            \x3cdiv id=\"selfInjectProductList\" class=\"space-y-3 max-h-[300px] overflow-y-auto minimal-scrollbar pr-1 mb-4\">\
+                                \
+                            \x3c\\/div>\
+                            \
+                            \x3cbutton id=\"btnSaveSelfInject\" onclick=\"saveSelfInject()\" class=\"w-full bg-gray-100 text-gray-400 font-bold py-3 rounded-xl shadow-sm transition text-xs cursor-not-allowed\" disabled>\
+                                \x3ci class=\"fas fa-bolt mr-1\">\x3c\\/i> Tarik Stok ke Sales Saya\
+                            \x3c\\/button>\
+                        \x3c\\/div>\
+                    \x3c\\/div>\
+                \x3c\\/div>\
+\
+                \
+                \x3cdiv id=\"tabHistory\" class=\"tab-content fade-in hidden\">\
+                    \x3cdiv class=\"bg-white p-4 rounded-2xl shadow-sm border border-gray-100 min-h-full\">\
+                        \x3cdiv class=\"flex justify-between items-center mb-4 border-b pb-2\">\
+                            \x3ch3 class=\"font-bold text-gray-800\">\x3ci class=\"fas fa-history text-blue-500 mr-2\">\x3c\\/i>Riwayat Transaksi\x3c\\/h3>\
+                        \x3c\\/div>\
+                        \x3cdiv class=\"space-y-3 text-sm text-gray-500\" id=\"historyListContainer\">\
+                            \x3cp class=\"text-center italic text-xs text-gray-400 py-6\">Belum ada transaksi selesai hari ini.\x3c\\/p>\
+                        \x3c\\/div>\
+                    \x3c\\/div>\
+                \x3c\\/div>\
+\
+                \
+                \x3cdiv id=\"tabReport\" class=\"tab-content fade-in hidden\">\
+                    \x3cdiv class=\"bg-white p-4 rounded-2xl shadow-sm border border-gray-100 min-h-full\">\
+                        \x3cdiv class=\"flex justify-between items-center mb-4 border-b pb-2\">\
+                            \x3ch3 class=\"font-bold text-gray-800\">\x3ci class=\"fas fa-chart-bar text-blue-500 mr-2\">\x3c\\/i>Laporan Penjualan\x3c\\/h3>\
+                        \x3c\\/div>\
+                        \x3cdiv class=\"grid grid-cols-2 gap-3 mb-4\">\
+                            \x3cdiv class=\"bg-blue-50 p-3 rounded-xl border border-blue-100\">\
+                                \x3cp class=\"text-[9px] text-blue-600 font-bold uppercase mb-1\">Total Omzet\x3c\\/p>\
+                                \x3cp class=\"text-base font-black text-gray-800\" id=\"salesReportOmzet\">Rp 0\x3c\\/p>\
+                            \x3c\\/div>\
+                            \x3cdiv class=\"bg-green-50 p-3 rounded-xl border border-green-100\">\
+                                \x3cp class=\"text-[9px] text-green-600 font-bold uppercase mb-1\">Toko Dikunjungi\x3c\\/p>\
+                                \x3cp class=\"text-base font-black text-gray-800\" id=\"salesReportVisit\">0\x3c\\/p>\
+                            \x3c\\/div>\
+                        \x3c\\/div>\
+                    \x3c\\/div>\
+                \x3c\\/div>\
+\
+                \
+                \x3cdiv id=\"tabSync\" class=\"tab-content fade-in hidden\">\
+                    \x3cdiv class=\"bg-white p-4 rounded-2xl shadow-sm border border-gray-100 flex flex-col gap-4\">\
+                        \x3ch3 class=\"font-bold text-gray-800 border-b pb-2\">\x3ci class=\"fas fa-exchange-alt text-blue-500 mr-2\">\x3c\\/i>Sinkronisasi\x3c\\/h3>\
+                        \x3cdiv class=\"bg-blue-50 p-4 rounded-xl border border-blue-100 text-center\">\
+                            \x3cbutton onclick=\"processDataLoad()\" class=\"w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl font-bold shadow-sm transition\">\
+                                \x3ci class=\"fas fa-cloud-download-alt mr-2\">\x3c\\/i> Segarkan Seluruh Data\
+                            \x3c\\/button>\
+                        \x3c\\/div>\
+                    \x3c\\/div>\
+                \x3c\\/div>\
+\
+                \
+                \x3cdiv id=\"tabAdminPanel\" class=\"tab-content fade-in hidden h-full flex-col\">\
+                    \x3cdiv id=\"adminSecDashboard\" class=\"admin-section block bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex-1\">\
+                        \x3ch3 class=\"font-black text-gray-800 text-lg mb-6\">Monitoring Sistem & Sinkronisasi\x3c\\/h3>\
+                        \x3cdiv class=\"grid grid-cols-2 gap-4 mb-6\">\
+                            \x3cdiv class=\"bg-green-50 p-4 rounded-xl border border-green-100\">\
+                                \x3cp class=\"text-[10px] text-green-600 font-bold uppercase mb-1\">Status Server\x3c\\/p>\
+                                \x3cp class=\"text-xl font-black text-gray-800\">ONLINE\x3c\\/p>\
+                            \x3c\\/div>\
+                            \x3cdiv class=\"bg-blue-50 p-4 rounded-xl border border-blue-100\">\
+                                \x3cp class=\"text-[10px] text-blue-600 font-bold uppercase mb-1\">Total Produk\x3c\\/p>\
+                                \x3cp class=\"text-xl font-black text-gray-800\" id=\"dashTotalProd\">0\x3c\\/p>\
+                            \x3c\\/div>\
+                        \x3c\\/div>\
+                        \x3cbutton onclick=\"processDataLoad()\" class=\"w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl shadow-md transition text-sm\">\
+                            \x3ci class=\"fas fa-sync mr-2\">\x3c\\/i> Segarkan Data (Refresh)\
+                        \x3c\\/button>\
+                    \x3c\\/div>\
+\
+                    \
+                    \x3cdiv id=\"adminSecUsers\" class=\"admin-section hidden bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex-1 flex-col\">\
+                        \x3cdiv class=\"flex justify-between items-center mb-4\">\
+                            \x3ch3 class=\"font-black text-gray-800 text-xl\">Users Database\x3c\\/h3>\
+                            \x3cbutton onclick=\"openFormUser()\" class=\"bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg shadow text-sm transition\">\x3ci class=\"fas fa-plus mr-1\">\x3c\\/i> Tambah\x3c\\/button>\
+                        \x3c\\/div>\
+                        \x3cdiv class=\"overflow-x-auto rounded-xl border border-gray-200 shadow-sm\">\
+                            \x3ctable class=\"w-full text-left border-collapse admin-table whitespace-nowrap\">\
+                                \x3cthead>\x3ctr>\x3cth>Username\x3c\\/th>\x3cth>Role\x3c\\/th>\x3cth>Password\x3c\\/th>\x3cth class=\"text-center\">Aksi\x3c\\/th>\x3c\\/tr>\x3c\\/thead>\
+                                \x3ctbody id=\"tableBodyUsers\">\x3c\\/tbody>\
+                            \x3c\\/table>\
+                        \x3c\\/div>\
+                    \x3c\\/div>\
+\
+                    \
+                    \x3cdiv id=\"adminSecProducts\" class=\"admin-section hidden bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex-1 flex-col\">\
+                        \x3cdiv class=\"flex justify-between items-center mb-4\">\
+                            \x3ch3 class=\"font-black text-gray-800 text-xl\">Products Master\x3c\\/h3>\
+                            \x3cbutton onclick=\"openFormProduct()\" class=\"bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg shadow text-sm transition\">\x3ci class=\"fas fa-plus mr-1\">\x3c\\/i> Tambah\x3c\\/button>\
+                        \x3c\\/div>\
+                        \x3cdiv class=\"overflow-x-auto rounded-xl border border-gray-200 shadow-sm\">\
+                            \x3ctable class=\"w-full text-left border-collapse admin-table whitespace-nowrap\">\
+                                \x3cthead>\x3ctr>\x3cth>Nama Produk\x3c\\/th>\x3cth>Harga Retail\x3c\\/th>\x3cth>Harga Grosir\x3c\\/th>\x3cth class=\"text-center\">Aksi\x3c\\/th>\x3c\\/tr>\x3c\\/thead>\
+                                \x3ctbody id=\"tableBodyProducts\">\x3c\\/tbody>\
+                            \x3c\\/table>\
+                        \x3c\\/div>\
+                    \x3c\\/div>\
+\
+                    \
+                    \x3cdiv id=\"adminSecOutlets\" class=\"admin-section hidden bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex-1 flex-col\">\
+                        \x3cdiv class=\"flex justify-between items-center mb-4\">\
+                            \x3ch3 class=\"font-black text-gray-800 text-xl\">Outlets Master\x3c\\/h3>\
+                            \x3cp class=\"text-xs text-gray-400 italic\">Data Master\x3c\\/p>\
+                        \x3c\\/div>\
+                        \x3cdiv class=\"overflow-x-auto rounded-xl border border-gray-200 shadow-sm\">\
+                            \x3ctable class=\"w-full text-left border-collapse admin-table whitespace-nowrap\">\
+                                \x3cthead>\x3ctr>\x3cth>Nama Toko\x3c\\/th>\x3cth>Alamat\x3c\\/th>\x3cth>Tipe\x3c\\/th>\x3c\\/tr>\x3c\\/thead>\
+                                \x3ctbody id=\"tableBodyOutlets\">\x3c\\/tbody>\
+                            \x3c\\/table>\
+                        \x3c\\/div>\
+                    \x3c\\/div>\
+\
+                    \
+                    \x3cdiv id=\"adminSecStockGudang\" class=\"admin-section hidden bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex-1 flex-col\">\
+                        \x3cdiv class=\"flex justify-between items-center mb-4\">\
+                            \x3ch3 class=\"font-black text-gray-800 text-xl\">Stock Gudang Pusat\x3c\\/h3>\
+                            \x3cbutton onclick=\"openFormProduct()\" class=\"bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg shadow text-sm transition\">\x3ci class=\"fas fa-plus mr-1\">\x3c\\/i> Tambah\x3c\\/button>\
+                        \x3c\\/div>\
+                        \x3cdiv class=\"overflow-x-auto rounded-xl border border-gray-200 shadow-sm flex-1\">\
+                            \x3ctable class=\"w-full text-left border-collapse admin-table whitespace-nowrap\">\
+                                \x3cthead>\x3ctr>\x3cth>NAMA PRODUK\x3c\\/th>\x3cth class=\"text-center\">STOCK GUDANG\x3c\\/th>\x3cth class=\"text-center\">AKSI\x3c\\/th>\x3c\\/tr>\x3c\\/thead>\
+                                \x3ctbody id=\"tableBodyStockGudang\">\x3c\\/tbody>\
+                            \x3c\\/table>\
+                        \x3c\\/div>\
+                    \x3c\\/div>\
+\
+                    \
+                    \x3cdiv id=\"adminSecStockStokis\" class=\"admin-section hidden bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex-1 flex-col overflow-y-auto\">\
+                        \x3cdiv class=\"mb-6\">\
+                            \x3cdiv class=\"flex justify-between items-center mb-4\">\
+                                \x3ch3 class=\"font-black text-gray-800 text-sm\">Master Gudang Stokis\x3c\\/h3>\
+                                \x3cbutton onclick=\"openFormStokis()\" class=\"text-blue-600 hover:text-blue-800 font-bold text-xs transition\">\x3ci class=\"fas fa-plus mr-1\">\x3c\\/i> Tambah\x3c\\/button>\
+                            \x3c\\/div>\
+                            \x3cdiv id=\"listMasterStokis\" class=\"text-xs text-gray-500 font-medium py-2\">\
+                                \
+                            \x3c\\/div>\
+                        \x3c\\/div>\
+                        \
+                        \x3chr class=\"border-gray-200 mb-6\">\
+\
+                        \x3cdiv class=\"mb-6\">\
+                            \x3ch3 class=\"font-black text-gray-800 text-sm mb-4\">Daftar Stok per Stokis\x3c\\/h3>\
+                            \x3cdiv id=\"listStokStokis\" class=\"text-xs text-gray-500 font-medium py-2\">\
+                                \
+                            \x3c\\/div>\
+                        \x3c\\/div>\
+                        \
+                        \x3chr class=\"border-gray-200 mb-6\">\
+\
+                        \x3cdiv>\
+                            \x3ch3 class=\"font-black text-gray-800 text-sm mb-6\">Inject Stock Gudang ke Stokis\x3c\\/h3>\
+                            \
+                            \x3cdiv class=\"space-y-6 max-w-xl\">\
+                                \x3cdiv>\
+                                    \x3clabel class=\"block text-[10px] font-bold text-gray-500 mb-2\">1. Pilih Stokis Target\x3c\\/label>\
+                                    \x3cselect id=\"injectStokisTarget\" class=\"w-full border-b border-gray-300 pb-2 text-sm font-bold text-gray-800 focus:outline-none focus:border-blue-500 appearance-none bg-transparent cursor-pointer\">\
+                                        \x3coption value=\"\">Pilih Stokis\x3c\\/option>\
+                                    \x3c\\/select>\
+                                \x3c\\/div>\
+                                \
+                                \x3cdiv class=\"pt-2\">\
+                                    \x3clabel class=\"block text-[10px] font-bold text-gray-500 mb-1\">2. Pilih Produk (Gudang Pusat)\x3c\\/label>\
+                                    \x3cp class=\"text-[10px] font-bold text-blue-600 mb-4\" id=\"selectedProductCount\">0 Produk Dipilih\x3c\\/p>\
+                                    \
+                                    \x3cdiv id=\"injectStokisProductList\" class=\"space-y-4 max-h-[300px] overflow-y-auto pr-2 minimal-scrollbar\">\
+                                        \
+                                    \x3c\\/div>\
+                                \x3c\\/div>\
+                                \
+                                \x3cbutton onclick=\"saveInjectStokis()\" class=\"w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-xl shadow-md transition text-sm mt-8\">\
+                                    Simpan Data\
+                                \x3c\\/button>\
+                            \x3c\\/div>\
+                        \x3c\\/div>\
+                    \x3c\\/div>\
+\
+                    \
+                    \x3cdiv id=\"adminSecInjectOutlets\" class=\"admin-section hidden flex-1 flex-col xl:flex-row gap-6\">\
+                        \x3cdiv class=\"bg-white p-6 rounded-2xl shadow-sm border border-gray-100 w-full xl:w-1\/3 flex flex-col h-fit\">\
+                            \x3ch3 class=\"font-black text-gray-800 text-lg mb-4 border-b pb-2\">Inject Outlet ke Rute Sales\x3c\\/h3>\
+                            \
+                            \x3cdiv class=\"space-y-6 mt-4\">\
+                                \x3cdiv>\
+                                    \x3clabel class=\"block text-[11px] font-bold text-gray-500 mb-2\">1. Pilih Salesman Target\x3c\\/label>\
+                                    \x3cselect id=\"injectRouteSalesTarget\" class=\"w-full border border-gray-300 rounded-md px-3 py-2 text-sm font-bold text-gray-800 focus:outline-none focus:ring-1 focus:ring-blue-500 appearance-none bg-white\">\
+                                        \x3coption value=\"\">Pilih Sales...\x3c\\/option>\
+                                    \x3c\\/select>\
+                                \x3c\\/div>\
+                                \x3cdiv>\
+                                    \x3clabel class=\"block text-[11px] font-bold text-gray-500 mb-2\">2. Pilih Kode Hari\x3c\\/label>\
+                                    \x3cselect id=\"injectRouteDay\" class=\"w-full border border-gray-300 rounded-md px-3 py-2 text-sm font-bold text-gray-800 focus:outline-none focus:ring-1 focus:ring-blue-500 appearance-none bg-white\">\
+                                        \x3coption value=\"SENIN1\">SENIN1\x3c\\/option>\x3coption value=\"SENIN2\">SENIN2\x3c\\/option>\
+                                        \x3coption value=\"SELASA1\">SELASA1\x3c\\/option>\x3coption value=\"SELASA2\">SELASA2\x3c\\/option>\
+                                        \x3coption value=\"RABU1\">RABU1\x3c\\/option>\x3coption value=\"RABU2\">RABU2\x3c\\/option>\
+                                        \x3coption value=\"KAMIS1\">KAMIS1\x3c\\/option>\x3coption value=\"KAMIS2\">KAMIS2\x3c\\/option>\
+                                        \x3coption value=\"JUMAT1\">JUMAT1\x3c\\/option>\x3coption value=\"JUMAT2\">JUMAT2\x3c\\/option>\
+                                        \x3coption value=\"SABTU1\">SABTU1\x3c\\/option>\x3coption value=\"SABTU2\">SABTU2\x3c\\/option>\
+                                        \x3coption value=\"MINGGU1\">MINGGU1\x3c\\/option>\x3coption value=\"MINGGU2\">MINGGU2\x3c\\/option>\
+                                    \x3c\\/select>\
+                                \x3c\\/div>\
+                                \x3cdiv>\
+                                    \x3clabel class=\"block text-[11px] font-bold text-gray-500 mb-2\">3. Pilih Outlet Master\x3c\\/label>\
+                                    \x3cselect id=\"injectRouteOutlet\" class=\"w-full border border-gray-300 rounded-md px-3 py-2 text-sm font-bold text-gray-800 focus:outline-none focus:ring-1 focus:ring-blue-500 appearance-none bg-white\">\
+                                        \x3coption value=\"\">Pilih Outlet...\x3c\\/option>\
+                                    \x3c\\/select>\
+                                \x3c\\/div>\
+                                \x3cbutton onclick=\"saveInjectRoute()\" class=\"w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-xl shadow-md transition text-sm mt-4\">\
+                                    Simpan Penugasan Rute\
+                                \x3c\\/button>\
+                            \x3c\\/div>\
+                        \x3c\\/div>\
+                        \x3cdiv class=\"bg-white p-6 rounded-2xl shadow-sm border border-gray-100 w-full xl:w-2\/3 flex flex-col\">\
+                            \x3ch3 class=\"font-black text-gray-800 text-lg mb-4\">Daftar Rute Aktif\x3c\\/h3>\
+                            \x3cdiv class=\"overflow-x-auto rounded-xl border border-gray-200 shadow-sm\">\
+                                \x3ctable class=\"w-full text-left border-collapse admin-table whitespace-nowrap\">\
+                                    \x3cthead>\x3ctr>\x3cth>Sales\x3c\\/th>\x3cth>Hari\x3c\\/th>\x3cth>Nama Outlet\x3c\\/th>\x3c\\/tr>\x3c\\/thead>\
+                                    \x3ctbody id=\"tableBodyInjectOutlets\">\x3c\\/tbody>\
+                                \x3c\\/table>\
+                            \x3c\\/div>\
+                        \x3c\\/div>\
+                    \x3c\\/div>\
+\
+                    \
+                    \x3cdiv id=\"adminSecInjectStock\" class=\"admin-section hidden bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex-1 flex-col overflow-y-auto\">\
+                        \x3cdiv class=\"mb-6\">\
+                            \x3ch3 class=\"font-black text-gray-800 text-sm mb-6\">Inject Stock Mobil Sales (Kurangi Gudang)\x3c\\/h3>\
+                            \
+                            \x3cdiv class=\"space-y-6 max-w-xl\">\
+                                \x3cdiv>\
+                                    \x3clabel class=\"block text-[10px] font-bold text-gray-500 mb-2\">1. Pilih Salesman\x3c\\/label>\
+                                    \x3cselect id=\"injectSalesTarget\" class=\"w-full border-b border-gray-300 pb-2 text-sm font-bold text-gray-800 focus:outline-none focus:border-blue-500 appearance-none bg-transparent cursor-pointer\">\
+                                        \x3coption value=\"\">Pilih Salesman\x3c\\/option>\
+                                    \x3c\\/select>\
+                                \x3c\\/div>\
+                                \
+                                \x3cdiv class=\"pt-2\">\
+                                    \x3clabel class=\"block text-[10px] font-bold text-gray-500 mb-1\">2. Pilih Produk Katalog\x3c\\/label>\
+                                    \x3cp class=\"text-[10px] font-bold text-blue-600 mb-4\" id=\"selectedSalesProductCount\">0 Produk Dipilih\x3c\\/p>\
+                                    \
+                                    \x3cdiv id=\"injectSalesProductList\" class=\"space-y-4 max-h-[300px] overflow-y-auto pr-2 minimal-scrollbar\">\
+                                        \
+                                    \x3c\\/div>\
+                                \x3c\\/div>\
+                                \
+                                \x3cbutton id=\"btnSaveInjectSales\" onclick=\"saveInjectSales()\" class=\"w-full bg-gray-100 text-gray-400 font-bold py-3 rounded-xl shadow-sm transition text-sm mt-8 cursor-not-allowed\" disabled>\
+                                    \x3ci class=\"fas fa-bolt mr-1\">\x3c\\/i> Inject Stock ke Sales\
+                                \x3c\\/button>\
+                            \x3c\\/div>\
+                        \x3c\\/div>\
+\
+                        \x3chr class=\"border-gray-200 mb-6 mt-4\">\
+\
+                        \x3cdiv>\
+                            \x3ch3 class=\"font-black text-gray-800 text-sm mb-4\">Daftar Sales yang Terinject Stock\x3c\\/h3>\
+                            \x3cdiv id=\"listSalesStock\" class=\"text-xs text-gray-500 font-medium py-2\">\
+                                \
+                            \x3c\\/div>\
+                        \x3c\\/div>\
+                    \x3c\\/div>\
+                    \
+                    \
+                    \x3cdiv id=\"adminSecRawData\" class=\"admin-section hidden bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex-1 flex-col\">\
+                        \x3ch3 class=\"font-black text-gray-800 text-lg mb-6 border-b pb-2\">History Transaksi (Raw Data)\x3c\\/h3>\
+                        \x3cdiv class=\"flex justify-end items-center mb-6\">\
+                            \x3cdiv class=\"flex items-center gap-3\">\
+                                \x3cbutton onclick=\"window.print()\" class=\"text-blue-700 hover:text-blue-900 transition flex items-center justify-center w-8 h-8 rounded-full hover:bg-blue-50\" title=\"Print\">\
+                                    \x3ci class=\"fas fa-print\">\x3c\\/i>\
+                                \x3c\\/button>\
+                                \x3cspan class=\"text-xs font-bold text-gray-500 tracking-wide\">Aktifkan Filter\x3c\\/span>\
+                                \
+                                \
+                                \x3clabel class=\"relative inline-flex items-center cursor-pointer\">\
+                                  \x3cinput type=\"checkbox\" id=\"filterToggleTrx\" class=\"sr-only peer\" onchange=\"toggleFilterTrx(this)\">\
+                                  \x3cdiv class=\"w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600\">\x3c\\/div>\
+                                \x3c\\/label>\
+                            \x3c\\/div>\
+                        \x3c\\/div>\
+\
+                        \
+                        \x3cdiv id=\"filterOptionsTrx\" class=\"hidden mb-6 p-4 bg-gray-50 rounded-xl border border-gray-200 flex gap-4 text-sm\">\
+                            \x3cinput type=\"date\" id=\"filterDateTrx\" class=\"border border-gray-300 rounded-lg px-3 py-1.5 outline-none focus:ring-1 focus:ring-blue-500\">\
+                            \x3cinput type=\"text\" id=\"filterSearchTrx\" placeholder=\"Cari Toko\/Sales...\" class=\"border border-gray-300 rounded-lg px-3 py-1.5 outline-none focus:ring-1 focus:ring-blue-500 flex-1\">\
+                            \x3cbutton onclick=\"renderRawData()\" class=\"bg-blue-600 text-white px-4 py-1.5 rounded-lg font-bold shadow-md\">Cari\x3c\\/button>\
+                        \x3c\\/div>\
+\
+                        \
+                        \x3cdiv class=\"overflow-x-auto rounded-xl border border-gray-200 shadow-sm flex-1 bg-gray-50\">\
+                            \x3ctable class=\"w-full text-left border-collapse admin-table whitespace-nowrap\">\
+                                \x3cthead>\x3ctr>\x3cth>TANGGAL\x3c\\/th>\x3cth>SALES\x3c\\/th>\x3cth>OUTLET\x3c\\/th>\x3cth class=\"text-center\">TOTAL ITEM\x3c\\/th>\x3cth class=\"text-right\">TOTAL OMZET\x3c\\/th>\x3c\\/tr>\x3c\\/thead>\
+                                \x3ctbody id=\"tableBodyRawData\">\
+                                    \x3ctr>\x3ctd colspan=\"5\" class=\"text-center text-gray-400 py-4 italic\">Memuat dari server...\x3c\\/td>\x3c\\/tr>\
+                                \x3c\\/tbody>\
+                            \x3c\\/table>\
+                        \x3c\\/div>\
+                    \x3c\\/div>\
+\
+                    \
+                    \x3cdiv id=\"adminSecLogGudang\" class=\"admin-section hidden bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex-1 flex-col\">\
+                        \x3ch3 class=\"font-black text-gray-800 text-lg mb-6 border-b pb-2\">Log Mutasi Gudang & Sales\x3c\\/h3>\
+                        \x3cdiv class=\"overflow-x-auto rounded-xl border border-gray-200 shadow-sm flex-1 bg-gray-50\">\
+                            \x3ctable class=\"w-full text-left border-collapse admin-table whitespace-nowrap\">\
+                                \x3cthead>\x3ctr>\x3cth>TANGGAL\x3c\\/th>\x3cth>TIPE\x3c\\/th>\x3cth>PRODUK\x3c\\/th>\x3cth class=\"text-center\">QTY\x3c\\/th>\x3cth>CATATAN\x3c\\/th>\x3c\\/tr>\x3c\\/thead>\
+                                \x3ctbody id=\"tableBodyLogGudang\">\
+                                    \x3ctr>\x3ctd colspan=\"5\" class=\"text-center text-gray-400 py-4 italic\">Fitur log sedang disiapkan...\x3c\\/td>\x3c\\/tr>\
+                                \x3c\\/tbody>\
+                            \x3c\\/table>\
+                        \x3c\\/div>\
+                    \x3c\\/div>\
+\
+                    \
+                    \x3cdiv id=\"adminSecSystemHealth\" class=\"admin-section hidden bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex-1 flex-col\">\
+                        \x3ch3 class=\"font-black text-gray-800 text-lg mb-6 border-b pb-2\">System Health & Archive\x3c\\/h3>\
+                        \x3cdiv class=\"grid grid-cols-2 gap-4 mb-6\">\
+                            \x3cdiv class=\"bg-green-50 p-4 rounded-xl border border-green-100\">\
+                                \x3cp class=\"text-[10px] text-green-600 font-bold uppercase mb-1\">Database Status\x3c\\/p>\
+                                \x3cp class=\"text-xl font-black text-gray-800\">HEALTHY\x3c\\/p>\
+                            \x3c\\/div>\
+                            \x3cdiv class=\"bg-blue-50 p-4 rounded-xl border border-blue-100\">\
+                                \x3cp class=\"text-[10px] text-blue-600 font-bold uppercase mb-1\">Archive Status\x3c\\/p>\
+                                \x3cp class=\"text-xl font-black text-gray-800\" id=\"dashArchiveStatus\">IDLE\x3c\\/p>\
+                            \x3c\\/div>\
+                        \x3c\\/div>\
+                        \x3cdiv class=\"bg-gray-50 p-4 rounded-xl border border-gray-200 mb-6\">\
+                            \x3ch4 class=\"text-xs font-bold text-gray-800 mb-3 border-b pb-2\">Performance Metrics\x3c\\/h4>\
+                            \x3cp class=\"text-[11px] text-gray-600 mb-1\">Last Archive Duration: \x3cb id=\"dashLastDuration\">-\x3c\\/b>\x3c\\/p>\
+                            \x3cp class=\"text-[11px] text-gray-600\">Largest Month Trx: \x3cb id=\"dashLargestMonth\">-\x3c\\/b>\x3c\\/p>\
+                        \x3c\\/div>\
+                        \x3cbutton onclick=\"triggerManualArchive()\" class=\"w-full md:w-auto bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl shadow-md transition text-sm\">\
+                            \x3ci class=\"fas fa-archive mr-2\">\x3c\\/i> Jalankan Archive Sekarang\
+                        \x3c\\/button>\
+                    \x3c\\/div>\
+\
+                    \
+                    \x3cdiv id=\"adminSecSettings\" class=\"admin-section hidden bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex-1 flex-col max-w-3xl\">\
+                        \x3ch3 class=\"font-black text-gray-800 text-lg mb-6 border-b pb-2\">Pengaturan Struk (Thermal 58mm)\x3c\\/h3>\
+                        \
+                        \x3cdiv class=\"space-y-8\">\
+                            \
+                            \x3cdiv>\
+                                \x3clabel class=\"block text-sm font-bold text-gray-800 mb-3\">Logo Struk\x3c\\/label>\
+                                \x3cdiv class=\"flex items-center gap-4 mb-4\">\
+                                    \x3cdiv class=\"w-24 h-24 bg-gray-200 rounded-lg flex items-center justify-center text-xs font-bold text-gray-500 border border-gray-300\">\
+                                        No Logo\
+                                    \x3c\\/div>\
+                                    \x3cbutton class=\"bg-[#1e40af] hover:bg-blue-800 text-white font-bold py-2 px-6 rounded-full shadow-md transition text-sm\">\
+                                        Upload Logo\
+                                    \x3c\\/button>\
+                                \x3c\\/div>\
+                                \x3cdiv class=\"flex items-center gap-3\">\
+                                    \x3cspan class=\"text-xs text-gray-500 font-bold\">Posisi Logo:\x3c\\/span>\
+                                    \x3cdiv class=\"flex gap-2\">\
+                                        \x3cbutton class=\"px-4 py-1.5 border border-gray-300 rounded-lg text-xs font-bold hover:bg-gray-50\">Left\x3c\\/button>\
+                                        \x3cbutton class=\"px-4 py-1.5 border border-purple-300 bg-purple-50 text-purple-700 rounded-lg text-xs font-bold\">Center\x3c\\/button>\
+                                        \x3cbutton class=\"px-4 py-1.5 border border-gray-300 rounded-lg text-xs font-bold hover:bg-gray-50\">Right\x3c\\/button>\
+                                    \x3c\\/div>\
+                                \x3c\\/div>\
+                            \x3c\\/div>\
+\
+                            \
+                            \x3cdiv class=\"relative border border-gray-300 rounded-lg p-4 pt-6 mt-4\">\
+                                \x3cspan class=\"absolute -top-3 left-4 bg-white px-2 text-xs font-bold text-gray-500\">Header Struk\x3c\\/span>\
+                                \x3ctextarea rows=\"2\" class=\"w-full text-sm font-bold text-gray-800 focus:outline-none resize-none\"><span class=\"app-title-dynamic\">ESRA UTAMA SFA</span>&#10;Padang, Indonesia\x3c\\/textarea>\
+                            \x3c\\/div>\
+                            \x3cdiv class=\"flex items-center gap-3 mt-2\">\
+                                \x3cspan class=\"text-xs text-gray-500 font-bold\">Posisi Header:\x3c\\/span>\
+                                \x3cdiv class=\"flex gap-2\">\
+                                    \x3cbutton class=\"px-4 py-1.5 border border-gray-300 rounded-lg text-xs font-bold hover:bg-gray-50\">Left\x3c\\/button>\
+                                    \x3cbutton class=\"px-4 py-1.5 border border-purple-300 bg-purple-50 text-purple-700 rounded-lg text-xs font-bold\">Center\x3c\\/button>\
+                                    \x3cbutton class=\"px-4 py-1.5 border border-gray-300 rounded-lg text-xs font-bold hover:bg-gray-50\">Right\x3c\\/button>\
+                                \x3c\\/div>\
+                            \x3c\\/div>\
+\
+                            \
+                            \x3cdiv class=\"relative border border-gray-300 rounded-lg p-4 pt-6 mt-4\">\
+                                \x3cspan class=\"absolute -top-3 left-4 bg-white px-2 text-xs font-bold text-gray-500\">Footer Struk\x3c\\/span>\
+                                \x3ctextarea rows=\"2\" class=\"w-full text-sm font-bold text-gray-800 focus:outline-none resize-none\">Terima Kasih Atas Kunjungan Anda&#10;Barang yang sudah dibeli tidak dapat ditukar\x3c\\/textarea>\
+                            \x3c\\/div>\
+                        \x3c\\/div>\
+                        \
+                        \x3cdiv class=\"mt-8 flex justify-end\">\
+                            \x3cbutton onclick=\"showMessage('Sukses', 'Pengaturan struk berhasil disimpan (Real-Time).')\" class=\"bg-green-600 hover:bg-green-700 text-white font-bold py-2.5 px-8 rounded-xl shadow-md transition text-sm\">\
+                                Simpan Pengaturan\
+                            \x3c\\/button>\
+                        \x3c\\/div>\
+                    \x3c\\/div>\
+\
+                \x3c\\/div>\
+            \x3c\\/main>\
+        \x3c\\/div>\
+    \x3c\\/div>\
+\
+    \x3cscript>\
+        var state = { \
+            currentUser: null,\
+            adminUsers: [], adminProducts: [], outlets: [], adminInjectOutlets: [], adminInjectStock: [], stokisMaster: [], stokisStock: [], rawData: []\
+        };\
+\
+        document.addEventListener('DOMContentLoaded', function() {\
+            var splash = document.getElementById('splashScreen');\
+            if(splash) {\
+                setTimeout(function(){ \
+                    splash.style.opacity = '0'; \
+                    setTimeout(function(){ splash.style.display = 'none'; }, 500); \
+                    document.getElementById('loginScreen').style.display = 'flex';\
+                }, 1000); \
+            }\
+            var pwdInput = document.getElementById('password');\
+            if(pwdInput) {\
+                pwdInput.addEventListener('keypress', function(e) {\
+                    if(e.keyCode === 13 || e.key === 'Enter') handleLogin();\
+                });\
+            }\
+        });\
+\
+        function showLoader(show, text) {\
+            var loader = document.getElementById('globalLoader'); if(!loader) return;\
+            loader.style.display = show ? 'flex' : 'none';\
+            document.getElementById('loaderText').textContent = text || 'Memproses...';\
+        }\
+        \
+        function closeLoader() { \
+            var loader = document.getElementById('globalLoader'); if(loader) loader.style.display='none'; \
+        }\
+        \
+        function showMessage(title, msg) {\
+            closeLoader(); \
+            document.getElementById('alertTitle').innerHTML = title; \
+            document.getElementById('alertMessage').innerText = msg;\
+            var c = document.getElementById('alertActions');\
+            c.innerHTML = '\x3cbutton onclick=\"document.getElementById(\\'customAlert\\').style.display=\\'none\\'\" class=\"w-full py-2.5 rounded-xl bg-blue-600 text-white text-sm font-bold hover:bg-blue-700 transition shadow-md\">Tutup\x3c\\/button>';\
+            document.getElementById('customAlert').style.display = 'flex';\
+        }\
+\
+        \
+        \
+        \
+        \
+        function handleLogin() {\
+            var u = document.getElementById('username').value.trim();\
+            var p = document.getElementById('password').value.trim();\
+            if(!u || !p) return showMessage(\"Peringatan\", \"Username dan Password wajib diisi!\");\
+            \
+            showLoader(true, \"Memverifikasi akun...\");\
+\
+            if (typeof google !== 'undefined' && google.script && google.script.run) {\
+                google.script.run\
+                    .withSuccessHandler(function(res) {\
+                        closeLoader();\
+                        if (res && res.success === true) {\
+                            state.currentUser = res.user;\
+                            processDataLoad();\
+                        } else {\
+                            showMessage(\"Gagal\", (res && res.message) ? res.message : \"Data tidak valid atau server bermasalah.\");\
+                        }\
+                    })\
+                    .withFailureHandler(function(err) {\
+                        closeLoader();\
+                        showMessage(\"Error Server\", \"Terjadi kegagalan koneksi: \" + err.message);\
+                    })\
+                    .attemptLogin(u, p);\
+            } else {\
+                closeLoader();\
+                showMessage(\"Sistem Berjalan di Luar Server\", \"Aplikasi ini sepenuhnya menggunakan data riil. Harap deploy dan jalankan melalui Google Apps Script agar terhubung ke Spreadsheet.\");\
+            }\
+        }\
+\
+        \
+        function processDataLoad() {\
+            document.getElementById('userNameDisplay').textContent = state.currentUser.username;\
+            document.getElementById('userRoleBadge').textContent = state.currentUser.role;\
+            \
+            showLoader(true, \"Menarik Data Master Dasar...\");\
+\
+            if (typeof google !== 'undefined' && google.script && google.script.run) {\
+                \
+                google.script.run\
+                    .withSuccessHandler(function(resStatic) {\
+                        if (resStatic && resStatic.success === true) {\
+                            if (resStatic.appName) {
+                                document.title = resStatic.appName;
+                                document.querySelectorAll('.app-title-dynamic').forEach(el => el.innerText = resStatic.appName);
+                            }
+                            state.adminUsers = resStatic.users || [];\
+                            state.outlets = resStatic.outlets || [];\
+                            state.stokisMaster = resStatic.stokisMaster || [];\
+                            \
+                            showLoader(true, \"Menarik Data Transaksi & Stok...\");\
+                            \
+                            \
+                            google.script.run\
+                                .withSuccessHandler(function(resDyn) {\
+                                    closeLoader();\
+                                    if (resDyn && resDyn.success === true) {\
+                                        state.adminProducts = resDyn.products || [];\
+                                        state.adminInjectOutlets = resDyn.injectOutlets || [];\
+                                        state.adminInjectStock = resDyn.injectStock || [];\
+                                        state.stokisStock = resDyn.stokisStock || [];\
+                                        state.rawData = resDyn.rawData || [];\
+                                        finishLoginRouting();\
+                                    } else {\
+                                        showMessage(\"Gagal Sinkronisasi Transaksi\", resDyn.message || \"Gagal memuat data dinamis.\");\
+                                    }\
+                                })\
+                                .withFailureHandler(function(err) {\
+                                    closeLoader(); showMessage(\"Error Server\", err.message);\
+                                })\
+                                .fetchDynamicData();\
+\
+                        } else {\
+                            closeLoader();\
+                            showMessage(\"Gagal Sinkronisasi Master\", resStatic.message || \"Gagal memuat Master.\");\
+                        }\
+                    })\
+                    .withFailureHandler(function(err) {\
+                        closeLoader();\
+                        showMessage(\"Error Server\", \"Gagal mengunduh data: \" + err.message);\
+                    })\
+                    .fetchStaticMaster();\
+            } else {\
+                closeLoader();\
+            }\
+        }\
+\
+        function finishLoginRouting() {\
+            document.getElementById('loginScreen').style.display = 'none'; \
+            document.getElementById('mainContent').style.display = 'flex';\
+\
+            if(state.currentUser.role === 'Admin' || state.currentUser.role === 'Super Admin') {\
+                document.body.classList.add('admin-desktop');\
+                switchTab('AdminPanel');\
+                switchAdminTab('Dashboard');\
+                startAutoSync(); \
+            } else {\
+                document.body.classList.remove('admin-desktop');\
+                switchTab('Sales');\
+                startAutoSync(); \
+            }\
+        }\
+\
+        \
+        var autoSyncInterval = null;\
+        function startAutoSync() {\
+            if (autoSyncInterval) clearInterval(autoSyncInterval);\
+            autoSyncInterval = setInterval(function() {\
+                if (typeof google !== 'undefined' && google.script && google.script.run && state.currentUser) {\
+                    google.script.run.withSuccessHandler(function(res) {\
+                        if (res && res.success === true) {\
+                            state.adminProducts = res.products || [];\
+                            state.adminInjectOutlets = res.injectOutlets || [];\
+                            state.adminInjectStock = res.injectStock || [];\
+                            state.stokisStock = res.stokisStock || [];\
+                            state.rawData = res.rawData || [];\
+                            \
+                            var activeTab = document.querySelector('.active-admin-nav');\
+                            if(activeTab) {\
+                                var sectionId = activeTab.id.replace('navAdmin', '');\
+                                switchAdminTab(sectionId); \
+                            } else {\
+                                \
+                                if(!document.getElementById('tabSales').classList.contains('hidden')) renderSalesOutlets();\
+                                if(!document.getElementById('tabStock').classList.contains('hidden')) renderSalesStock();\
+                                if(!document.getElementById('tabHistory').classList.contains('hidden')) renderSalesHistory();\
+                                if(!document.getElementById('tabReport').classList.contains('hidden')) renderSalesReport();\
+                            }\
+                        }\
+                    }).fetchDynamicData();\
+                }\
+            }, 15000); \
+        }\
+\
+        \
+        \
+        \
+\
+        function switchTab(tabId) {\
+            if(state.currentUser && state.currentUser.role === 'Sales') {\
+                document.querySelectorAll('.tab-content').forEach(t => { t.classList.add('hidden'); t.classList.remove('block'); });\
+                document.querySelectorAll('.sales-only').forEach(b => { b.classList.remove('text-blue-600'); b.classList.add('text-gray-400'); });\
+                var target = document.getElementById('tab' + tabId); \
+                if(target) { target.classList.remove('hidden'); target.classList.add('block'); }\
+                var btn = document.getElementById('nav' + tabId);\
+                if(btn) { btn.classList.add('text-blue-600'); btn.classList.remove('text-gray-400'); }\
+\
+                if(tabId === 'Sales') renderSalesOutlets(); \
+                if(tabId === 'Stock') renderSalesStock();\
+                if(tabId === 'History') renderSalesHistory();\
+                if(tabId === 'Report') renderSalesReport();\
+            } else if (state.currentUser && (state.currentUser.role === 'Admin' || state.currentUser.role === 'Super Admin')) {\
+                document.querySelectorAll('.tab-content').forEach(t => { t.classList.add('hidden'); t.classList.remove('block'); });\
+                document.getElementById('tabAdminPanel').classList.remove('hidden');\
+                document.getElementById('tabAdminPanel').classList.add('flex');\
+            }\
+        }\
+\
+        function switchAdminTab(sectionId) {\
+            document.querySelectorAll('.admin-only.nav-btn').forEach(btn => {\
+                btn.classList.remove('active-admin-nav');\
+                var icon = btn.querySelector('i');\
+                if(icon) { icon.classList.remove('text-blue-400', 'text-cyan-400'); icon.classList.add('text-gray-400'); }\
+            });\
+\
+            var activeBtn = document.getElementById('navAdmin' + sectionId);\
+            if(activeBtn) {\
+                activeBtn.classList.add('active-admin-nav');\
+                var activeIcon = activeBtn.querySelector('i');\
+                if(activeIcon) { activeIcon.classList.remove('text-gray-400'); activeIcon.classList.add('text-blue-400'); }\
+            }\
+\
+            document.querySelectorAll('.admin-section').forEach(sec => { sec.classList.add('hidden'); sec.classList.remove('block', 'flex', 'flex-col', 'xl:flex-row'); });\
+\
+            var targetSec = document.getElementById('adminSec' + sectionId);\
+            if(targetSec) {\
+                targetSec.classList.remove('hidden');\
+                if (['InjectOutlets'].includes(sectionId)) {\
+                    targetSec.classList.add('flex', 'flex-col', 'xl:flex-row');\
+                } else if (['RawData', 'LogGudang', 'Settings', 'StockStokis', 'SystemHealth', 'StockGudang', 'Products', 'Users', 'Outlets', 'InjectStock'].includes(sectionId)) {\
+                    targetSec.classList.add('flex', 'flex-col');\
+                } else {\
+                    targetSec.classList.add('block');\
+                }\
+            }\
+\
+            if(sectionId === 'Dashboard') document.getElementById('dashTotalProd').textContent = state.adminProducts.length;\
+            \
+            if(sectionId === 'Users') {\
+                renderTable('tableBodyUsers', state.adminUsers, u => `\
+                    \x3ctr class=\"bg-white hover:bg-gray-50\">\
+                        \x3ctd class=\"font-bold text-xs\">${u.Username||u.username}\x3c\\/td>\
+                        \x3ctd class=\"text-xs\">${u.Role||u.role}\x3c\\/td>\
+                        \x3ctd class=\"font-mono text-gray-400 text-xs\">\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\x3c\\/td>\
+                        \x3ctd class=\"text-center\">\
+                            \x3cbutton onclick=\"openFormUser('${u.ID||u.id}', '${u.Username||u.username}', '${u.Role||u.role}', '${u.Password||u.password}')\" class=\"text-blue-500 hover:text-blue-700 bg-blue-50 hover:bg-blue-100 w-8 h-8 rounded-lg transition mr-1\" title=\"Edit\">\x3ci class=\"fas fa-edit\">\x3c\\/i>\x3c\\/button>\
+                            \x3cbutton onclick=\"deleteUserDb('${u.ID||u.id}', '${u.Username||u.username}')\" class=\"text-red-500 hover:text-red-700 bg-red-50 hover:bg-red-100 w-8 h-8 rounded-lg transition\" title=\"Hapus\">\x3ci class=\"fas fa-trash\">\x3c\\/i>\x3c\\/button>\
+                        \x3c\\/td>\
+                    \x3c\\/tr>\
+                `);\
+            }\
+            \
+            if(sectionId === 'Products') {\
+                renderTable('tableBodyProducts', state.adminProducts, p => `\
+                    \x3ctr class=\"bg-white hover:bg-gray-50\">\
+                        \x3ctd class=\"font-bold uppercase text-xs\">${p.Name||p.name}\x3c\\/td>\
+                        \x3ctd class=\"text-xs\">${p.PriceRetail||p.priceRetail||0}\x3c\\/td>\
+                        \x3ctd class=\"text-xs\">${p.PriceWholesale||p.priceWholesale||0}\x3c\\/td>\
+                        \x3ctd class=\"text-center\">\
+                            \x3cbutton onclick=\"openFormProduct('${p.ID||p.id}', '${p.Name||p.name}', '${p.PriceRetail||p.priceRetail||0}', '${p.PriceWholesale||p.priceWholesale||0}', '${p.Stock||p.stock||0}')\" class=\"text-blue-500 hover:text-blue-700 bg-blue-50 hover:bg-blue-100 w-8 h-8 rounded-lg transition mr-1\" title=\"Edit\">\x3ci class=\"fas fa-edit\">\x3c\\/i>\x3c\\/button>\
+                            \x3cbutton onclick=\"deleteProductDb('${p.ID||p.id}')\" class=\"text-red-500 hover:text-red-700 bg-red-50 hover:bg-red-100 w-8 h-8 rounded-lg transition\" title=\"Hapus\">\x3ci class=\"fas fa-trash\">\x3c\\/i>\x3c\\/button>\
+                        \x3c\\/td>\
+                    \x3c\\/tr>\
+                `);\
+            }\
+            \
+            if(sectionId === 'Outlets') renderTable('tableBodyOutlets', state.outlets, o => `\x3ctr>\x3ctd class=\"font-bold text-xs\">${o.Name||o.name}\x3c\\/td>\x3ctd class=\"text-xs\">${o.Address||o.address}\x3c\\/td>\x3ctd class=\"text-xs\">${o.Type||o.type}\x3c\\/td>\x3c\\/tr>`);\
+            \
+            if(sectionId === 'StockGudang') {\
+                renderTable('tableBodyStockGudang', state.adminProducts, p => `\
+                    \x3ctr class=\"bg-white hover:bg-gray-50\">\
+                        \x3ctd class=\"font-bold uppercase text-xs\">${p.Name||p.name}\x3c\\/td>\
+                        \x3ctd class=\"text-center font-black text-blue-700 text-xs\">${p.Stock||p.stock||0}\x3c\\/td>\
+                        \x3ctd class=\"text-center\">\
+                            \x3cbutton onclick=\"openFormProduct('${p.ID||p.id}', '${p.Name||p.name}', '${p.PriceRetail||p.priceRetail||0}', '${p.PriceWholesale||p.priceWholesale||0}', '${p.Stock||p.stock||0}')\" class=\"text-blue-500 hover:text-blue-700 bg-blue-50 hover:bg-blue-100 w-8 h-8 rounded-lg transition mr-1\" title=\"Edit\">\x3ci class=\"fas fa-edit\">\x3c\\/i>\x3c\\/button>\
+                            \x3cbutton onclick=\"deleteProductDb('${p.ID||p.id}')\" class=\"text-red-500 hover:text-red-700 bg-red-50 hover:bg-red-100 w-8 h-8 rounded-lg transition\" title=\"Hapus\">\x3ci class=\"fas fa-trash\">\x3c\\/i>\x3c\\/button>\
+                        \x3c\\/td>\
+                    \x3c\\/tr>\
+                `);\
+            }\
+            \
+            if(sectionId === 'StockStokis') renderStockStokis();\
+            if(sectionId === 'InjectOutlets') renderAdminInjectOutlets();\
+            if(sectionId === 'InjectStock') renderInjectSales();\
+            if(sectionId === 'RawData') renderRawData();\
+        }\
+\
+        \
+        function toggleCollapse(id, iconId) {\
+            const el = document.getElementById(id);\
+            const icon = document.getElementById(iconId);\
+            if (el.classList.contains('hidden')) {\
+                el.classList.remove('hidden');\
+                el.classList.add('expanded');\
+                if(icon) { icon.classList.remove('fa-chevron-down'); icon.classList.add('fa-chevron-up'); }\
+            } else {\
+                el.classList.add('hidden');\
+                el.classList.remove('expanded');\
+                if(icon) { icon.classList.remove('fa-chevron-up'); icon.classList.add('fa-chevron-down'); }\
+            }\
+        }\
+\
+        \
+        function renderStockStokis() {\
+            const listMaster = document.getElementById('listMasterStokis');\
+            if (state.stokisMaster && state.stokisMaster.length > 0) {\
+                let masterHtml = '\x3cdiv class=\"flex gap-3 flex-wrap\">';\
+                state.stokisMaster.forEach(s => {\
+                    let sId = s.ID || s.id;\
+                    let sName = s.Name || s.name;\
+                    let sAddr = s.Address || s.address || '';\
+                    let sAuth = s.SalesAuthority || s.salesAuthority || '';\
+                    \
+                    masterHtml += `\
+                    \x3cdiv class=\"relative inline-block text-left\">\
+                        \x3cbutton onclick=\"toggleDropdown('dd-${sId}')\" class=\"px-4 py-2 bg-white text-gray-700 font-bold text-xs rounded-full border border-gray-300 shadow-sm hover:bg-gray-50 focus:outline-none transition-colors flex items-center gap-2\">\
+                            ${sName} \x3ci class=\"fas fa-chevron-down text-[10px] text-gray-400\">\x3c\\/i>\
+                        \x3c\\/button>\
+                        \x3cdiv id=\"dd-${sId}\" class=\"dropdown-menu mt-1\">\
+                            \x3ca onclick=\"openFormStokis('${sId}', '${sName}', '${sAddr}', '${sAuth}')\">\x3ci class=\"fas fa-edit text-blue-500 mr-2 w-4 text-center\">\x3c\\/i> Edit\x3c\\/a>\
+                            \x3ca onclick=\"deleteStokisDb('${sId}')\" class=\"text-red-600\">\x3ci class=\"fas fa-trash text-red-500 mr-2 w-4 text-center\">\x3c\\/i> Hapus\x3c\\/a>\
+                        \x3c\\/div>\
+                    \x3c\\/div>`;\
+                });\
+                listMaster.innerHTML = masterHtml + '\x3c\\/div>';\
+            } else {\
+                listMaster.innerHTML = '\x3cspan class=\"italic text-gray-400\">Belum ada Master Stokis. Silakan tambahkan.\x3c\\/span>';\
+            }\
+\
+            const listStok = document.getElementById('listStokStokis');\
+            if (state.stokisStock && state.stokisStock.length > 0) {\
+                let grouped = {};\
+                state.stokisStock.forEach(st => {\
+                    let sId = st.StokisID || st.stokisId;\
+                    let pId = st.ProductID || st.product;\
+                    let qty = parseInt(st.Qty || st.qty) || 0;\
+                    if(!grouped[sId]) grouped[sId] = {};\
+                    if(!grouped[sId][pId]) grouped[sId][pId] = 0;\
+                    grouped[sId][pId] += qty;\
+                });\
+\
+                let html = '\x3cdiv class="space-y-3">';\
+                var todayDate = new Date().toLocaleDateString('id-ID', {day: '2-digit', month: 'short', year: 'numeric'});\
+\
+                for(let sId in grouped) {\
+                    let stokisName = state.stokisMaster.find(sm => (sm.ID || sm.id) === sId)?.Name || sId;\
+                    html += `\
+                    \x3cdiv class="border border-gray-200 rounded-xl bg-white shadow-sm overflow-hidden">\
+                        \x3cdiv class="p-4 bg-gray-50 flex justify-between items-center cursor-pointer hover:bg-gray-100 transition" onclick="toggleCollapse('col-stk-${sId}', 'icon-stk-${sId}')">\
+                            \x3cdiv>\
+                                \x3ch4 class="font-bold text-gray-800 text-sm">${stokisName}\x3c\\/h4>\
+                                \x3cspan class="text-[9px] text-gray-500">Update Terakhir: ${todayDate}\x3c\\/span>\
+                            \x3c\\/div>\
+                            \x3ci id="icon-stk-${sId}" class="fas fa-chevron-down text-gray-400 transition-transform">\x3c\\/i>\
+                        \x3c\\/div>\
+                        \x3cdiv id="col-stk-${sId}" class="hidden p-4 space-y-2 border-t border-gray-200 collapse-content">\
+                    `;\
+                    let hasStock = false;\
+                    for(let pId in grouped[sId]) {\
+                        let qty = grouped[sId][pId];\
+                        if (qty <= 0) continue;\
+                        hasStock = true;\
+                        let prodName = state.adminProducts.find(p => (p.ID || p.id) === pId)?.Name || pId;\
+                        html += `\
+                            \x3cdiv class="flex justify-between items-center border-b border-gray-100 last:border-0 pb-2 last:pb-0">\
+                                \x3cspan class="font-bold text-gray-700 text-xs">${prodName}\x3c\\/span>\
+                                \x3cspan class="font-black text-blue-600 bg-blue-50 px-2 py-1 rounded text-xs">${qty} PCS\x3c\\/span>\
+                            \x3c\\/div>\
+                        `;\
+                    }\
+                    if (!hasStock) html += `\x3cspan class="italic text-gray-400 text-xs">Stok kosong\x3c\\/span>`;\
+                    html += `\x3c\\/div>\x3c\\/div>`;\
+                }\
+                html += '\x3c\\/div>';\
+                listStok.innerHTML = html;\
+            } else {\
+                listStok.innerHTML = '\x3cspan class="italic text-gray-400">Belum ada stok di Stokis. Silakan inject dari gudang di bawah ini.\x3c\\/span>';\
+            }\
+            \
+            const selectTarget = document.getElementById('injectStokisTarget');\
+            selectTarget.innerHTML = '\x3coption value=\"\">Pilih Stokis\x3c\\/option>';\
+            if (state.stokisMaster) state.stokisMaster.forEach(s => selectTarget.innerHTML += `\x3coption value=\"${s.ID || s.id}\">${s.Name || s.name}\x3c\\/option>`);\
+\
+            const productList = document.getElementById('injectStokisProductList');\
+            productList.innerHTML = '';\
+            if (state.adminProducts) {\
+                state.adminProducts.forEach(p => {\
+                    productList.innerHTML += `\
+                    \x3cdiv class=\"flex justify-between items-center p-3 border border-gray-100 rounded-lg hover:bg-gray-50 transition-colors\">\
+                        \x3cdiv class=\"flex-1 pr-2\">\
+                            \x3ch4 class=\"font-bold text-xs text-gray-800 uppercase leading-tight\">${p.Name || p.name}\x3c\\/h4>\
+                            \x3cp class=\"text-[10px] text-gray-400 font-medium mt-1\">Gudang: ${p.Stock || p.stock || 0} PCS\x3c\\/p>\
+                        \x3c\\/div>\
+                        \x3cdiv class=\"w-16 flex-shrink-0\">\
+                            \x3cinput type=\"number\" min=\"0\" placeholder=\"0\" data-id=\"${p.ID || p.id}\" class=\"stokis-qty-input w-full text-xs font-black text-center text-blue-700 bg-white border border-gray-300 rounded px-1 py-1.5 focus:outline-none focus:border-blue-500 shadow-inner\" oninput=\"updateSelectedCount()\">\
+                        \x3c\\/div>\
+                    \x3c\\/div>`;\
+                });\
+            }\
+        }\
+\
+        \
+        function renderInjectSales() {\
+            const selectTarget = document.getElementById('injectSalesTarget');\
+            selectTarget.innerHTML = '\x3coption value=\"\">Pilih Salesman\x3c\\/option>';\
+            if (state.adminUsers) {\
+                state.adminUsers.filter(u => (u.Role || u.role) === 'Sales').forEach(s => {\
+                    selectTarget.innerHTML += `\x3coption value=\"${s.Username || s.username}\">${s.Username || s.username}\x3c\\/option>`;\
+                });\
+            }\
+\
+            const productList = document.getElementById('injectSalesProductList');\
+            productList.innerHTML = '';\
+            if (state.adminProducts) {\
+                state.adminProducts.forEach(p => {\
+                    productList.innerHTML += `\
+                    \x3cdiv class=\"flex justify-between items-center p-3 border border-gray-100 rounded-lg hover:bg-gray-50 transition-colors\">\
+                        \x3cdiv class=\"flex-1 pr-2\">\
+                            \x3ch4 class=\"font-bold text-xs text-gray-800 uppercase leading-tight\">${p.Name || p.name}\x3c\\/h4>\
+                            \x3cp class=\"text-[10px] text-gray-400 font-medium mt-1\">Gudang: ${p.Stock || p.stock || 0} PCS\x3c\\/p>\
+                        \x3c\\/div>\
+                        \x3cdiv class=\"w-16 flex-shrink-0\">\
+                            \x3cinput type=\"number\" min=\"0\" placeholder=\"0\" data-id=\"${p.ID || p.id}\" class=\"sales-qty-input w-full text-xs font-black text-center text-blue-700 bg-white border border-gray-300 rounded px-1 py-1.5 focus:outline-none focus:border-blue-500 shadow-inner\" oninput=\"updateSalesSelectedCount()\">\
+                        \x3c\\/div>\
+                    \x3c\\/div>`;\
+                });\
+            }\
+\
+            const listSales = document.getElementById('listSalesStock');\
+            if (state.adminInjectStock && state.adminInjectStock.length > 0) {\
+                let grouped = {};\
+                state.adminInjectStock.forEach(st => {\
+                    let sId = String(st.Sales || st.sales).toUpperCase().trim();\
+                    let date = st.Date || st.date || \"-\";\
+                    let key = sId + \"|\" + date; \
+                    if(!grouped[key]) grouped[key] = [];\
+                    grouped[key].push(st);\
+                });\
+\
+                let html = '\x3cdiv class=\"space-y-3\">';\
+                for(let key in grouped) {\
+                    let parts = key.split(\"|\");\
+                    let sName = parts[0];\
+                    let sDate = parts[1];\
+                    let colId = key.replace(\/[^a-zA-Z0-9]\/g, ''); \
+                    html += `\
+                    \x3cdiv class=\"border border-gray-200 rounded-xl bg-white shadow-sm overflow-hidden\">\
+                        \x3cdiv class=\"p-4 bg-gray-50 flex justify-between items-center cursor-pointer hover:bg-gray-100 transition\" onclick=\"toggleCollapse('col-sls-${colId}', 'icon-sls-${colId}')\">\
+                            \x3cdiv>\
+                                \x3ch4 class=\"font-bold text-gray-800 text-sm uppercase\">${sName}\x3c\\/h4>\
+                                \x3cspan class=\"text-[9px] text-gray-500 font-bold bg-blue-100 text-blue-700 px-2 py-0.5 rounded\">${sDate}\x3c\\/span>\
+                            \x3c\\/div>\
+                            \x3ci id=\"icon-sls-${colId}\" class=\"fas fa-chevron-down text-gray-400 transition-transform\">\x3c\\/i>\
+                        \x3c\\/div>\
+                        \x3cdiv id=\"col-sls-${colId}\" class=\"hidden p-4 space-y-2 border-t border-gray-200 collapse-content\">\
+                    `;\
+                    grouped[key].forEach(st => {\
+                        html += `\
+                            \x3cdiv class=\"flex justify-between items-center border-b border-gray-100 last:border-0 pb-2 last:pb-0\">\
+                                \x3cspan class=\"block font-bold text-gray-700 text-xs\">${st.Product || st.product}\x3c\\/span>\
+                                \x3cspan class=\"font-black text-blue-600 bg-blue-50 px-2 py-1 rounded text-xs\">${st.Qty || st.qty} PCS\x3c\\/span>\
+                            \x3c\\/div>\
+                        `;\
+                    });\
+                    html += `\x3c\\/div>\x3c\\/div>`;\
+                }\
+                listSales.innerHTML = html + '\x3c\\/div>';\
+            } else {\
+                listSales.innerHTML = '\x3cspan class=\"italic text-gray-400\">Belum ada stock yang di-inject ke sales.\x3c\\/span>';\
+            }\
+        }\
+\
+        \
+        function renderAdminInjectOutlets() {\
+            const salesSel = document.getElementById('injectRouteSalesTarget');\
+            salesSel.innerHTML = '\x3coption value=\"\">Pilih Sales...\x3c\\/option>';\
+            state.adminUsers.filter(u => (u.Role||u.role) === 'Sales').forEach(u => {\
+                salesSel.innerHTML += `\x3coption value=\"${u.Username||u.username}\">${u.Username||u.username}\x3c\\/option>`;\
+            });\
+\
+            const outletSel = document.getElementById('injectRouteOutlet');\
+            outletSel.innerHTML = '\x3coption value=\"\">Pilih Outlet...\x3c\\/option>';\
+            state.outlets.forEach(o => {\
+                outletSel.innerHTML += `\x3coption value=\"${o.Name||o.name}\">${o.Name||o.name}\x3c\\/option>`;\
+            });\
+\
+            renderTable('tableBodyInjectOutlets', state.adminInjectOutlets, io => `\x3ctr>\x3ctd class=\"font-bold text-blue-600 text-xs uppercase\">${io.Sales||io.sales}\x3c\\/td>\x3ctd class=\"font-bold text-xs\">${io.Day||io.day}\x3c\\/td>\x3ctd class=\"text-xs\">${io.Outlet||io.outlet}\x3c\\/td>\x3c\\/tr>`);\
+        }\
+\
+        function saveInjectRoute() {\
+            var sales = document.getElementById('injectRouteSalesTarget').value;\
+            var day = document.getElementById('injectRouteDay').value;\
+            var outlet = document.getElementById('injectRouteOutlet').value;\
+\
+            if(!sales || !day || !outlet) return showMessage('Peringatan', 'Lengkapi semua pilihan form.');\
+\
+            showLoader(true, \"Menyimpan Rute Penugasan...\");\
+            google.script.run.withSuccessHandler(res => {\
+                if(res.success) processDataLoad(); else showMessage(\"Gagal\", res.message);\
+            }).injectOutletToSales(sales, day, outlet);\
+        }\
+\
+        \/\/ --- RENDER MENU RAW DATA \/ HISTORY TRANSAKSI ---\
+        function toggleFilterTrx(checkbox) {\
+            const filterArea = document.getElementById('filterOptionsTrx');\
+            if (checkbox.checked) filterArea.classList.remove('hidden');\
+            else filterArea.classList.add('hidden');\
+        }\
+\
+        function renderRawData() {\
+            var tbody = document.getElementById('tableBodyRawData');\
+            var filterDate = document.getElementById('filterDateTrx') ? document.getElementById('filterDateTrx').value : '';\
+            var filterSearch = document.getElementById('filterSearchTrx') ? document.getElementById('filterSearchTrx').value.toLowerCase() : '';\
+\
+            var data = state.rawData || [];\
+            \
+            if(filterDate) data = data.filter(d => (d.Date || d.date || '').includes(filterDate));\
+            if(filterSearch) {\
+                data = data.filter(d => \
+                    String(d.Sales || d.sales || '').toLowerCase().includes(filterSearch) || \
+                    String(d.Outlet || d.outlet || '').toLowerCase().includes(filterSearch)\
+                );\
+            }\
+\
+            if(data && data.length > 0) {\
+                tbody.innerHTML = '';\
+                data.forEach(d => {\
+                    tbody.innerHTML += `\
+                        \x3ctr class=\"bg-white hover:bg-gray-50\">\
+                            \x3ctd class=\"text-xs\">${d.Date || d.date}\x3c\\/td>\
+                            \x3ctd class=\"font-bold text-xs uppercase\">${d.Sales || d.sales}\x3c\\/td>\
+                            \x3ctd class=\"font-bold text-xs\">${d.Outlet || d.outlet}\x3c\\/td>\
+                            \x3ctd class=\"text-center text-xs\">${d.TotalItem || d.totalItem || 0}\x3c\\/td>\
+                            \x3ctd class=\"font-black text-blue-700 text-xs text-right\">Rp ${parseFloat(d.TotalOmzet || d.totalOmzet || 0).toLocaleString('id-ID')}\x3c\\/td>\
+                        \x3c\\/tr>\
+                    `;\
+                });\
+            } else {\
+                tbody.innerHTML = `\x3ctr>\x3ctd colspan=\"5\" class=\"text-center text-gray-400 py-4 italic\">Tidak ada transaksi ditemukan.\x3c\\/td>\x3c\\/tr>`;\
+            }\
+        }\
+\
+        function renderTable(tbodyId, dataArray, rowHtmlFn) {\
+            var tbody = document.getElementById(tbodyId);\
+            if(!tbody) return;\
+            tbody.innerHTML = '';\
+            if(dataArray && dataArray.length > 0) dataArray.forEach(item => tbody.innerHTML += rowHtmlFn(item));\
+            else tbody.innerHTML = `\x3ctr>\x3ctd colspan=\"5\" class=\"text-center text-gray-400 py-4 italic\">Belum ada data.\x3c\\/td>\x3c\\/tr>`;\
+        }\
+\
+        \/\/ --- RENDER TAB SALES (MOBILE APP) ---\
+        function switchSalesSubTab(tabName) {\
+            if (tabName === 'Regular') {\
+                document.getElementById('btnTabRegular').classList.replace('text-gray-500', 'text-white');\
+                document.getElementById('btnTabRegular').classList.replace('bg-transparent', 'bg-[#1d4ed8]');\
+                document.getElementById('btnTabNOO').classList.replace('text-white', 'text-gray-500');\
+                document.getElementById('btnTabNOO').classList.replace('bg-[#1d4ed8]', 'bg-transparent');\
+                document.getElementById('salesRegularContent').classList.remove('hidden');\
+                document.getElementById('salesNOOContent').classList.add('hidden');\
+            } else {\
+                document.getElementById('btnTabNOO').classList.replace('text-gray-500', 'text-white');\
+                document.getElementById('btnTabNOO').classList.replace('bg-transparent', 'bg-[#1d4ed8]');\
+                document.getElementById('btnTabRegular').classList.replace('text-white', 'text-gray-500');\
+                document.getElementById('btnTabRegular').classList.replace('bg-[#1d4ed8]', 'bg-transparent');\
+                document.getElementById('salesNOOContent').classList.remove('hidden');\
+                document.getElementById('salesRegularContent').classList.add('hidden');\
+            }\
+        }\
+        \
+        function renderSalesOutlets() {\
+            var list = document.getElementById('outletList'); list.innerHTML = '';\
+            var myOutlets = state.adminInjectOutlets.filter(io => String(io.Sales||io.sales||\"\").toLowerCase().trim() === String(state.currentUser.username).toLowerCase().trim());\
+            if(myOutlets.length === 0) list.innerHTML = '\x3cp class=\"text-center italic py-4 text-xs text-gray-400\">Belum ada rute ter-inject untuk Anda hari ini.\x3c\\/p>';\
+            else myOutlets.forEach(o => list.innerHTML += `\x3cdiv class=\"p-3 rounded-xl border border-gray-100 flex justify-between items-center bg-white shadow-sm\">\x3cdiv>\x3ch4 class=\"font-bold text-sm text-gray-800\">${o.Outlet||o.outlet}\x3c\\/h4>\x3cp class=\"text-[10px] text-gray-500 font-bold\">${o.Day||o.day}\x3c\\/p>\x3c\\/div>\x3c\\/div>`);\
+        }\
+\
+        function renderSalesStock() {\
+            var c = document.getElementById('stockListContainer'); c.innerHTML = '';\
+            var myStock = state.adminInjectStock.filter(is => String(is.Sales||is.sales||\"\").toLowerCase().trim() === String(state.currentUser.username).toLowerCase().trim());\
+            \
+            \/\/ Group the stock to avoid duplicates\
+            var aggregatedStock = {};\
+            myStock.forEach(p => {\
+                var prod = p.Product || p.product;\
+                var qty = parseInt(p.Qty || p.qty) || 0;\
+                if(aggregatedStock[prod]) aggregatedStock[prod] += qty;\
+                else aggregatedStock[prod] = qty;\
+            });\
+\
+            if(Object.keys(aggregatedStock).length === 0) {\
+                c.innerHTML = '\x3cp class=\"text-center italic py-4 text-xs text-gray-400\">Belum ada stock ter-inject ke Anda.\x3c\\/p>';\
+            } else {\
+                for (var prod in aggregatedStock) {\
+                    c.innerHTML += `\x3cdiv class=\"bg-white p-3 rounded-xl shadow-sm border border-gray-100 flex items-center justify-between mb-2\">\x3cdiv class=\"flex-1\">\x3ch4 class=\"font-bold text-gray-800 text-xs uppercase\">${prod}\x3c\\/h4>\x3c\\/div>\x3cdiv class=\"bg-blue-50 w-12 h-12 rounded-xl flex flex-col items-center justify-center\">\x3cspan class=\"text-[9px] text-blue-500 font-bold\">Qty\x3c\\/span>\x3cspan class=\"font-black text-blue-700\">${aggregatedStock[prod]}\x3c\\/span>\x3c\\/div>\x3c\\/div>`;\
+                }\
+            }\
+\
+            \
+            var selfInjectSec = document.getElementById('selfInjectSection');\
+            var myStokis = state.stokisMaster.find(s => String(s.SalesAuthority || s.salesAuthority || \"\").toLowerCase().trim() === String(state.currentUser.username).toLowerCase().trim());\
+            \
+            if (myStokis) {\
+                selfInjectSec.classList.remove('hidden');\
+                var pList = document.getElementById('selfInjectProductList');\
+                pList.innerHTML = '';\
+                \
+                var sStock = state.stokisStock.filter(st => String(st.StokisID || st.stokisId) === String(myStokis.ID || myStokis.id));\
+                var aggregatedStock = {};\
+                sStock.forEach(st => {\
+                    var pId = st.ProductID || st.product;\
+                    if (!aggregatedStock[pId]) aggregatedStock[pId] = 0;\
+                    aggregatedStock[pId] += parseInt(st.Qty || st.qty) || 0;\
+                });\
+                var hasStock = false;\
+                for (var k in aggregatedStock) { if(aggregatedStock[k] > 0) hasStock = true; }\
+                \
+                if (!hasStock) {\
+                    pList.innerHTML = '\x3cp class="text-xs italic text-gray-400">Gudang stokis Anda kosong.\x3c\\/p>';\
+                } else {\
+                    for (var prodId in aggregatedStock) {\
+                        var qty = aggregatedStock[prodId];\
+                        if (qty <= 0) continue;\
+                        var prodName = state.adminProducts.find(p => (p.ID || p.id) === prodId)?.Name || prodId;\
+                        pList.innerHTML += `\
+                        \x3cdiv class="flex justify-between items-center p-3 border border-gray-100 rounded-lg hover:bg-gray-50 transition-colors bg-white">\
+                            \x3cdiv class="flex-1 pr-2">\
+                                \x3ch4 class="font-bold text-xs text-gray-800 uppercase leading-tight">${prodName}\x3c\\/h4>\
+                                \x3cp class="text-[10px] text-gray-400 font-medium mt-1">Stok Tersedia: ${qty} PCS\x3c\\/p>\
+                            \x3c\\/div>\
+                            \x3cdiv class="w-16 flex-shrink-0">\
+                                \x3cinput type="number" min="0" max="${qty}" placeholder="0" data-id="${prodId}" class="self-qty-input w-full text-xs font-black text-center text-blue-700 bg-gray-50 border border-gray-200 rounded px-1 py-1.5 focus:outline-none focus:border-blue-500 shadow-inner" oninput="updateSelfInjectCount(this)">\
+                            \x3c\\/div>\
+                        \x3c\\/div>`;\
+                    }\
+                }\
+                \
+                var btnAction = document.getElementById('btnSaveSelfInject');\
+                btnAction.onclick = function() { saveSelfInject(myStokis.ID || myStokis.id); };\
+            } else {\
+                selfInjectSec.classList.add('hidden');\
+            }\
+        }\
+        \
+        function renderSalesHistory() {\
+            var container = document.getElementById('historyListContainer');\
+            var myTrx = state.rawData.filter(r => String(r.Sales||r.sales||\"\").toLowerCase().trim() === String(state.currentUser.username).toLowerCase().trim());\
+            \
+            if(myTrx.length === 0) {\
+                container.innerHTML = '\x3cp class=\"text-center italic text-xs text-gray-400 py-6\">Belum ada transaksi selesai.\x3c\\/p>';\
+                return;\
+            }\
+            \
+            container.innerHTML = '';\
+            myTrx.forEach(trx => {\
+                container.innerHTML += `\
+                    \x3cdiv class=\"bg-gray-50 p-3 rounded-xl border border-gray-200 mb-2\">\
+                        \x3cdiv class=\"flex justify-between items-center border-b border-gray-200 pb-2 mb-2\">\
+                            \x3cspan class=\"font-bold text-xs text-gray-800 uppercase\">${trx.Outlet||trx.outlet}\x3c\\/span>\
+                            \x3cspan class=\"text-[9px] text-gray-500 bg-gray-200 px-2 py-0.5 rounded font-bold\">${trx.Date||trx.date}\x3c\\/span>\
+                        \x3c\\/div>\
+                        \x3cdiv class=\"flex justify-between items-center\">\
+                            \x3cspan class=\"text-[10px] text-gray-600\">${trx.TotalItem||trx.totalItem} Item\x3c\\/span>\
+                            \x3cspan class=\"font-black text-blue-600 text-xs\">Rp ${parseFloat(trx.TotalOmzet||trx.totalOmzet||0).toLocaleString('id-ID')}\x3c\\/span>\
+                        \x3c\\/div>\
+                    \x3c\\/div>\
+                `;\
+            });\
+        }\
+\
+        function renderSalesReport() {\
+            var myTrx = state.rawData.filter(r => String(r.Sales||r.sales||\"\").toLowerCase().trim() === String(state.currentUser.username).toLowerCase().trim());\
+            var totalOmzet = 0;\
+            var totalVisits = myTrx.length;\
+            myTrx.forEach(trx => {\
+                totalOmzet += parseFloat(trx.TotalOmzet||trx.totalOmzet) || 0;\
+            });\
+            \
+            document.getElementById('salesReportOmzet').innerText = \"Rp \" + totalOmzet.toLocaleString('id-ID');\
+            document.getElementById('salesReportVisit').innerText = totalVisits;\
+        }\
+\
+        function logout() {\
+            state.currentUser = null;\
+            document.getElementById('mainContent').style.display='none'; \
+            document.getElementById('loginScreen').style.display='flex'; \
+        }\
+\
+        \/\/ ==========================================\
+        \/\/ FUNGSI FORM DINAMIS (CREATE\/EDIT\/DELETE)\
+        \/\/ ==========================================\
+\
+        function closeFormModal() { document.getElementById('formModal').style.display = 'none'; }\
+        \
+        function openFormModal(title, bodyHtml, submitFn) {\
+            document.getElementById('formModalTitle').innerText = title;\
+            document.getElementById('formModalBody').innerHTML = bodyHtml;\
+            document.getElementById('formModalSubmit').onclick = submitFn;\
+            document.getElementById('formModal').style.display = 'flex';\
+        }\
+\
+        \/\/ --- NEW OPEN OUTLET (NOO) & GEOTAG ---\
+        function openFormNOO() {\
+            switchSalesSubTab('NOO');\
+        }\
+\
+        function getGeotag() {\
+            if (navigator.geolocation) {\
+                document.getElementById('btnGeotag').innerHTML = '\x3ci class=\"fas fa-spinner fa-spin mr-1\">\x3c\\/i> Mendapatkan lokasi...';\
+                navigator.geolocation.getCurrentPosition(function(position) {\
+                    var lat = position.coords.latitude.toFixed(5);\
+                    var lon = position.coords.longitude.toFixed(5);\
+                    var geo = lat + \", \" + lon;\
+                    document.getElementById('nooGeotagVal').value = geo;\
+                    var btn = document.getElementById('btnGeotag');\
+                    btn.innerHTML = '\x3ci class=\"fas fa-check text-green-500 mr-1\">\x3c\\/i> Lokasi Tersimpan (' + geo + ')';\
+                    btn.classList.replace('text-red-600', 'text-green-600');\
+                    fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}`).then(r=>r.json()).then(d=>{if(d&&d.display_name){var a=document.getElementById('nooAddress');a.value=a.value?a.value+', '+d.display_name:d.display_name;}}).catch(e=>console.log(e));\
+                }, function(error) {\
+                    document.getElementById('btnGeotag').innerHTML = '\x3ci class=\"fas fa-exclamation-triangle mr-1\">\x3c\\/i> Gagal ambil lokasi. Coba lagi.';\
+                    showMessage('Error Geotag', 'Pastikan izin lokasi (GPS) diaktifkan di browser\/HP Anda.');\
+                }, {enableHighAccuracy: true, timeout: 10000, maximumAge: 0});\
+            } else {\
+                showMessage('Error', 'Browser Anda tidak mendukung Geotagging.');\
+            }\
+        }\
+\
+        function submitNOO() {\
+            var name = document.getElementById('nooName').value.trim();\
+            var address = document.getElementById('nooAddress').value.trim();\
+            var day = document.getElementById('nooDay').value;\
+            var geo = document.getElementById('nooGeotagVal').value;\
+\
+            if(!name) return showMessage('Peringatan', 'Nama Outlet wajib diisi.');\
+            \
+            showLoader(true, \"Menyimpan Outlet NOO...\");\
+            \
+            if (typeof google !== 'undefined' && google.script && google.script.run) {\
+                google.script.run.withSuccessHandler(res => {\
+                    if(res.success) {\
+                        showMessage(\"Sukses\", res.message);\
+                        document.getElementById('nooName').value = '';\
+                        document.getElementById('nooAddress').value = '';\
+                        document.getElementById('nooGeotagVal').value = '';\
+                        document.getElementById('btnGeotag').innerHTML = '\x3ci class=\"fas fa-crosshairs mr-1\">\x3c\\/i> Ambil Geotag Location';\
+                        document.getElementById('btnGeotag').classList.replace('text-green-600', 'text-red-600');\
+                        switchSalesSubTab('Regular');\
+                        processDataLoad(); \
+                    } else showMessage(\"Gagal\", res.message);\
+                }).saveOutletNOO(name, address, geo, day, state.currentUser.username);\
+            }\
+        }\
+\
+        \/\/ --- STOKIS ---\
+        function openFormStokis(id='', name='', address='', salesAuth='') {\
+            const isEdit = id !== '';\
+            const title = isEdit ? 'Edit Data Stokis' : 'Tambah Data Stokis';\
+            \
+            let salesOptions = '';\
+            if (state.adminUsers) {\
+                state.adminUsers.filter(u => (u.Role || u.role) === 'Sales').forEach(s => {\
+                    let sName = s.Username || s.username;\
+                    salesOptions += `\x3coption value=\"${sName}\" ${salesAuth === sName ? 'selected' : ''}>${sName}\x3c\\/option>`;\
+                });\
+            }\
+            \
+            const html = `\
+                \x3cdiv class=\"space-y-5 mt-4\">\
+                    \x3cinput type=\"hidden\" id=\"inputStokisId\" value=\"${id}\">\
+                    \x3cdiv class=\"relative border border-gray-400 rounded-md px-3 py-2.5\">\
+                        \x3clabel class=\"absolute -top-2.5 left-2 bg-white px-1 text-[10px] text-gray-500 font-bold\">ID Stokis\x3c\\/label>\
+                        \x3cinput type=\"text\" value=\"${id ? id : 'Auto Generated'}\" disabled class=\"w-full text-sm font-bold text-gray-800 focus:outline-none bg-transparent cursor-not-allowed\">\
+                    \x3c\\/div>\
+                    \x3cdiv class=\"relative border border-gray-400 rounded-md px-3 py-2.5\">\
+                        \x3clabel class=\"absolute -top-2.5 left-2 bg-white px-1 text-[10px] text-gray-500 font-bold\">Nama Stokis\x3c\\/label>\
+                        \x3cinput type=\"text\" id=\"inputStokisName\" value=\"${name}\" class=\"w-full text-sm font-bold text-gray-800 focus:outline-none bg-transparent\">\
+                    \x3c\\/div>\
+                    \x3cdiv class=\"relative border border-gray-400 rounded-md px-3 py-2.5\">\
+                        \x3clabel class=\"absolute -top-2.5 left-2 bg-white px-1 text-[10px] text-gray-500 font-bold\">Alamat\x3c\\/label>\
+                        \x3cinput type=\"text\" id=\"inputStokisAddress\" value=\"${address}\" class=\"w-full text-sm font-bold text-gray-800 focus:outline-none bg-transparent\">\
+                    \x3c\\/div>\
+                    \x3cdiv class=\"relative border border-gray-400 rounded-md px-3 py-2.5\">\
+                        \x3clabel class=\"absolute -top-2.5 left-2 bg-white px-1 text-[10px] text-gray-500 font-bold\">Pilih Sales (Otoritas Stokis)\x3c\\/label>\
+                        \x3cselect id=\"inputStokisSales\" class=\"w-full text-sm font-bold text-gray-800 focus:outline-none bg-transparent appearance-none\">\
+                            \x3coption value=\"\">Pilih Sales...\x3c\\/option>\
+                            ${salesOptions}\
+                        \x3c\\/select>\
+                        \x3ci class=\"fas fa-caret-down absolute right-3 top-3.5 text-gray-500\">\x3c\\/i>\
+                    \x3c\\/div>\
+                \x3c\\/div>`;\
+            openFormModal(title, html, saveStokisDb);\
+        }\
+\
+        function saveStokisDb() {\
+            var id = document.getElementById('inputStokisId').value;\
+            var name = document.getElementById('inputStokisName').value.trim();\
+            var address = document.getElementById('inputStokisAddress').value.trim();\
+            var sales = document.getElementById('inputStokisSales').value;\
+            \
+            if(!name || !sales) return showMessage('Peringatan', 'Nama Stokis dan Otoritas Sales wajib diisi.');\
+            \
+            closeFormModal(); showLoader(true, \"Menyimpan Data Stokis...\");\
+            google.script.run.withSuccessHandler(res => {\
+                if(res.success) processDataLoad(); else showMessage(\"Gagal\", res.message);\
+            }).saveMasterStokis(id, name, address, sales);\
+        }\
+\
+        function deleteStokisDb(id) {\
+            if(!confirm(\"Yakin ingin menghapus Gudang Stokis ini? Aksi ini tidak akan menghapus data stok riwayat yang terikat.\")) return;\
+            showLoader(true, \"Menghapus Stokis...\");\
+            google.script.run.withSuccessHandler(res => {\
+                if(res.success) processDataLoad(); else showMessage(\"Gagal\", res.message);\
+            }).deleteMasterStokis(id);\
+        }\
+\
+        \/\/ --- USERS ---\
+        function openFormUser(id='', username='', role='Sales', password='') {\
+            const isEdit = id !== '';\
+            const title = isEdit ? 'Edit User' : 'Tambah User Baru';\
+            const html = `\
+                \x3cdiv class=\"space-y-5 mt-4\">\
+                    \x3cinput type=\"hidden\" id=\"userId\" value=\"${id}\">\
+                    \x3cdiv class=\"relative border border-gray-400 rounded-md px-3 py-2.5\">\
+                        \x3clabel class=\"absolute -top-2.5 left-2 bg-white px-1 text-[10px] text-gray-500 font-bold\">USERNAME\x3c\\/label>\
+                        \x3cinput type=\"text\" id=\"userUsername\" value=\"${username}\" class=\"w-full text-sm font-bold text-gray-800 focus:outline-none bg-transparent\">\
+                    \x3c\\/div>\
+                    \x3cdiv class=\"relative border border-gray-400 rounded-md px-3 py-2.5\">\
+                        \x3clabel class=\"absolute -top-2.5 left-2 bg-white px-1 text-[10px] text-gray-500 font-bold\">ROLE\x3c\\/label>\
+                        \x3cselect id=\"userRole\" class=\"w-full text-sm font-bold text-gray-800 focus:outline-none bg-transparent appearance-none\">\
+                            \x3coption value=\"Sales\" ${role==='Sales'?'selected':''}>Sales\x3c\\/option>\
+                            \x3coption value=\"Admin\" ${role==='Admin'?'selected':''}>Admin\x3c\\/option>\
+                        \x3c\\/select>\
+                        \x3ci class=\"fas fa-caret-down absolute right-3 top-3.5 text-gray-500\">\x3c\\/i>\
+                    \x3c\\/div>\
+                    \x3cdiv class=\"relative border border-gray-400 rounded-md px-3 py-2.5\">\
+                        \x3clabel class=\"absolute -top-2.5 left-2 bg-white px-1 text-[10px] text-gray-500 font-bold\">PASSWORD\x3c\\/label>\
+                        \x3cinput type=\"text\" id=\"userPassword\" value=\"${password}\" class=\"w-full text-sm font-bold text-gray-800 focus:outline-none bg-transparent\">\
+                    \x3c\\/div>\
+                \x3c\\/div>\
+            `;\
+            openFormModal(title, html, saveUserDb);\
+        }\
+\
+        function saveUserDb() {\
+            var id = document.getElementById('userId').value;\
+            var username = document.getElementById('userUsername').value.trim();\
+            var role = document.getElementById('userRole').value;\
+            var password = document.getElementById('userPassword').value.trim();\
+            \
+            if(!username || !password) return showMessage('Peringatan', 'Username dan Password tidak boleh kosong.');\
+            \
+            closeFormModal(); showLoader(true, \"Menyimpan Data User...\");\
+            google.script.run.withSuccessHandler(res => {\
+                if(res.success) processDataLoad(); else showMessage(\"Gagal\", res.message);\
+            }).saveUser(id, username, role, password);\
+        }\
+\
+        function deleteUserDb(id, username) {\
+            if(String(username).toLowerCase() === 'admin') {\
+                return showMessage('Ditolak', 'Akun Super Admin default tidak boleh dihapus!');\
+            }\
+            if(!confirm(\"Yakin ingin menghapus User \" + username + \"?\")) return;\
+            showLoader(true, \"Menghapus User...\");\
+            google.script.run.withSuccessHandler(res => {\
+                if(res.success) processDataLoad(); else showMessage(\"Gagal\", res.message);\
+            }).deleteUser(id);\
+        }\
+\
+        \/\/ --- STOCK GUDANG (PRODUCTS) ---\
+        function openFormProduct(id='', name='', retail='', wholesale='', stock='') {\
+            const isEdit = id !== '';\
+            const title = isEdit ? 'Edit Stock Gudang' : 'Tambah Stock Gudang Baru';\
+            const html = `\
+                \x3cdiv class=\"space-y-5 mt-4\">\
+                    \x3cinput type=\"hidden\" id=\"prdId\" value=\"${id}\">\
+                    \x3cdiv class=\"relative border border-gray-400 rounded-md px-3 py-2.5\">\
+                        \x3clabel class=\"absolute -top-2.5 left-2 bg-white px-1 text-[10px] text-gray-500 font-bold\">NAMA PRODUK\x3c\\/label>\
+                        \x3cinput type=\"text\" id=\"prdName\" value=\"${name}\" class=\"w-full text-sm font-bold text-gray-800 focus:outline-none bg-transparent\">\
+                    \x3c\\/div>\
+                    \x3cdiv class=\"flex gap-2\">\
+                        \x3cdiv class=\"relative border border-gray-400 rounded-md px-3 py-2.5 flex-1\">\
+                            \x3clabel class=\"absolute -top-2.5 left-2 bg-white px-1 text-[10px] text-gray-500 font-bold\">HARGA RETAIL\x3c\\/label>\
+                            \x3cinput type=\"number\" id=\"prdRetail\" value=\"${retail}\" class=\"w-full text-sm font-bold text-gray-800 focus:outline-none bg-transparent\">\
+                        \x3c\\/div>\
+                        \x3cdiv class=\"relative border border-gray-400 rounded-md px-3 py-2.5 flex-1\">\
+                            \x3clabel class=\"absolute -top-2.5 left-2 bg-white px-1 text-[10px] text-gray-500 font-bold\">HARGA GROSIR\x3c\\/label>\
+                            \x3cinput type=\"number\" id=\"prdWholesale\" value=\"${wholesale}\" class=\"w-full text-sm font-bold text-gray-800 focus:outline-none bg-transparent\">\
+                        \x3c\\/div>\
+                    \x3c\\/div>\
+                    \x3cdiv class=\"relative border-b-2 border-blue-400 bg-blue-50 rounded-t-lg px-3 py-2.5\">\
+                        \x3clabel class=\"absolute -top-2.5 left-2 bg-white px-1 text-[10px] text-blue-500 font-bold border border-blue-400 rounded\">JUMLAH STOK GUDANG\x3c\\/label>\
+                        \x3cinput type=\"number\" id=\"prdStock\" value=\"${stock}\" class=\"w-full text-lg font-black text-blue-800 focus:outline-none bg-transparent\">\
+                    \x3c\\/div>\
+                \x3c\\/div>\
+            `;\
+            openFormModal(title, html, saveProductDb);\
+        }\
+\
+        function saveProductDb() {\
+            var id = document.getElementById('prdId').value;\
+            var name = document.getElementById('prdName').value.trim();\
+            var retail = document.getElementById('prdRetail').value || 0;\
+            var wholesale = document.getElementById('prdWholesale').value || 0;\
+            var stock = document.getElementById('prdStock').value || 0;\
+            \
+            if(!name) return;\
+            closeFormModal(); showLoader(true, \"Menyimpan Data...\");\
+            google.script.run.withSuccessHandler(res => {\
+                if(res.success) {\
+                    showMessage(\"Sukses\", res.message || \"Data berhasil disimpan.\");\
+                    processDataLoad(); \
+                } else showMessage(\"Gagal\", res.message);\
+            }).saveProduct(id, name, retail, wholesale, stock);\
+        }\
+\
+        function deleteProductDb(id) {\
+            if(!confirm(\"Yakin ingin menghapus Produk ini?\")) return;\
+            showLoader(true, \"Menghapus Data...\");\
+            google.script.run.withSuccessHandler(res => {\
+                if(res.success) processDataLoad(); else showMessage(\"Gagal\", res.message);\
+            }).deleteProduct(id);\
+        }\
+\
+        \
+        function updateSelectedCount() {\
+            let count = 0;\
+            document.querySelectorAll('.stokis-qty-input').forEach(i => { if (parseInt(i.value) > 0) count++; });\
+            document.getElementById('selectedProductCount').innerText = `${count} Produk Dipilih`;\
+        }\
+\
+        function saveInjectStokis() {\
+            const target = document.getElementById('injectStokisTarget').value;\
+            if(!target) return showMessage('Peringatan', 'Harap pilih Stokis terlebih dahulu.');\
+            \
+            let payload = [];\
+            document.querySelectorAll('.stokis-qty-input').forEach(input => {\
+                let qty = parseInt(input.value);\
+                if (qty > 0) payload.push({ productId: input.dataset.id, qty: qty });\
+            });\
+            \
+            if(payload.length === 0) return showMessage('Peringatan', 'Belum ada qty yang diisi.');\
+            \
+            showLoader(true, \"Mengirim Stock ke Stokis...\");\
+            google.script.run.withSuccessHandler(res => {\
+                if(res.success) processDataLoad(); else showMessage(\"Gagal\", res.message);\
+            }).injectToStokis(target, payload);\
+        }\
+\
+        \
+        function updateSalesSelectedCount() {\
+            let count = 0;\
+            document.querySelectorAll('.sales-qty-input').forEach(i => { if (parseInt(i.value) > 0) count++; });\
+            document.getElementById('selectedSalesProductCount').innerText = `${count} Produk Dipilih`;\
+            \
+            const btn = document.getElementById('btnSaveInjectSales');\
+            if (count > 0) {\
+                btn.classList.remove('bg-gray-100', 'text-gray-400', 'cursor-not-allowed');\
+                btn.classList.add('bg-blue-600', 'hover:bg-blue-700', 'text-white');\
+                btn.disabled = false;\
+            } else {\
+                btn.classList.add('bg-gray-100', 'text-gray-400', 'cursor-not-allowed');\
+                btn.classList.remove('bg-blue-600', 'hover:bg-blue-700', 'text-white');\
+                btn.disabled = true;\
+            }\
+        }\
+\
+        function saveInjectSales() {\
+            const target = document.getElementById('injectSalesTarget').value;\
+            if(!target) return showMessage('Peringatan', 'Harap pilih Salesman terlebih dahulu.');\
+            \
+            let payload = [];\
+            document.querySelectorAll('.sales-qty-input').forEach(input => {\
+                let qty = parseInt(input.value);\
+                if (qty > 0) payload.push({ productId: input.dataset.id, qty: qty });\
+            });\
+            \
+            if(payload.length === 0) return showMessage('Peringatan', 'Belum ada qty yang diisi.');\
+            \
+            showLoader(true, \"Mengirim Stock ke Sales...\");\
+            google.script.run.withSuccessHandler(res => {\
+                if(res.success) {\
+                    showMessage(\"Sukses\", \"Stok berhasil di-inject ke Sales.\");\
+                    processDataLoad(); \
+                } else showMessage(\"Gagal\", res.message);\
+            }).injectToSales(target, payload);\
+        }\
+\
+        \
+        function updateSelfInjectCount(el) {\
+            let maxVal = parseInt(el.getAttribute('max'));\
+            let currentVal = parseInt(el.value);\
+            if (currentVal > maxVal) {\
+                el.value = maxVal; \
+            }\
+\
+            let count = 0;\
+            document.querySelectorAll('.self-qty-input').forEach(i => { if (parseInt(i.value) > 0) count++; });\
+            document.getElementById('selfInjectProductCount').innerText = `${count} Produk Dipilih`;\
+            \
+            const btn = document.getElementById('btnSaveSelfInject');\
+            if (count > 0) {\
+                btn.classList.remove('bg-gray-100', 'text-gray-400', 'cursor-not-allowed');\
+                btn.classList.add('bg-green-600', 'hover:bg-green-700', 'text-white');\
+                btn.disabled = false;\
+            } else {\
+                btn.classList.add('bg-gray-100', 'text-gray-400', 'cursor-not-allowed');\
+                btn.classList.remove('bg-green-600', 'hover:bg-green-700', 'text-white');\
+                btn.disabled = true;\
+            }\
+        }\
+\
+        function saveSelfInject(stokisId) {\
+            var myStokis = state.stokisMaster.find(s => String(s.SalesAuthority || s.salesAuthority || \"\").toLowerCase().trim() === String(state.currentUser.username).toLowerCase().trim());\
+            var currentStokisId = myStokis.ID || myStokis.id;\
+\
+            let payload = [];\
+            document.querySelectorAll('.self-qty-input').forEach(input => {\
+                let qty = parseInt(input.value);\
+                if (qty > 0) payload.push({ productId: input.dataset.id, qty: qty });\
+            });\
+            \
+            if(payload.length === 0) return showMessage('Peringatan', 'Belum ada kuantitas yang ditarik.');\
+            \
+            showLoader(true, \"Menarik Stock dari Gudang Cabang...\");\
+            google.script.run.withSuccessHandler(res => {\
+                if(res.success) {\
+                    showMessage('Sukses', 'Stok berhasil ditarik ke Mobil Anda.');\
+                    processDataLoad(); \
+                } else showMessage(\"Gagal\", res.message);\
+            }).injectFromStokisToSales(currentStokisId, state.currentUser.username, payload);\
+        }\
+\
+        function triggerManualArchive() { \
+            showLoader(true, \"Memulai proses Archive (Real)...\");\
+            if (typeof google !== 'undefined' && google.script && google.script.run) {\
+                google.script.run\
+                    .withSuccessHandler(res => {\
+                        closeLoader(); showMessage(\"Sukses\", res.message || \"Proses Archive berhasil diselesaikan.\");\
+                    })\
+                    .executeRealArchive(); \
+            }\
+        }\
+    \x3c\\/script>\
+\x3c\\/body>\
+\x3c\\/html>","ncc":"{\"awhs\":true}"}", "", undefined, true , false  , "false", "https:\/\/n-ixa7tcwa6tjzdv52i3abdr3mvoei2nkbs5dmxiy-0lu-script.googleusercontent.com", "https:\/\/drive.google.com\/abuse?id=AKkXjowDqMse8JmsNNIg-rmPUreVqtSJwdfe2CkJB1ZPl6iaCbwujZTrr4ccunltVA3ez9E_ObPP4qr_PIc4XPdiJiZC0hUvkrd7ejxb%3A0&docurl=https%3A%2F%2Fscript.google.com%2Fmacros%2Fs%2FAKfycbxxoaNCXP6qPviOehKZUvGY0rPNTMekYLaogfTSVF81tuJAmLBg-o1yYKjY1fFp5ROxLA%2Fexec");}
+el.src = 'https:\/\/n-ixa7tcwa6tjzdv52i3abdr3mvoei2nkbs5dmxiy-0lu-script.googleusercontent.com\/userCodeAppPanel';
+}());
+</script>
+</body>
+</html>

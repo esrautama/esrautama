@@ -1,0 +1,12 @@
+                val tabsList = listOf(
+                    "Users" to Icons.Default.Person,
+                    "Products" to Icons.Default.Inventory2,
+                    "History Transaksi" to Icons.Default.Receipt,
+                    "Raw Data" to Icons.Default.List,
+                    "Stock Gudang" to Icons.Default.History,
+                    "Stock Stokis" to Icons.Default.Layers,
+                    "Inject Outlets" to Icons.Default.Storefront,
+                    "Inject Stock" to Icons.Default.Bolt,
+                    "Log Gudang" to Icons.Default.AssignmentLate,
+                    "Settings" to Icons.Default.Settings
+                )

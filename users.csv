@@ -1,0 +1,8 @@
+ID,Username,Password,Role
+ADM-01,admin,admin123,Admin
+SPV-01,spv,spv123,Supervisor
+SLS-01,WAWAN,sales123,Sales
+SLS-02,MADRIM,sales123,Sales
+SLS-03,TONARI,sales123,Sales
+SLS-04,ROY,sales123,Sales
+SLS-05,HENDRIS,sales123,Sales

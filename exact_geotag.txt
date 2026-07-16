@@ -1,0 +1,12 @@
+navigator.geolocation.getCurrentPosition(function(position) {\
+                    var lat = position.coords.latitude.toFixed(5);\
+                    var lon = position.coords.longitude.toFixed(5);\
+                    var geo = lat + \", \" + lon;\
+                    document.getElementById('nooGeotagVal').value = geo;\
+                    var btn = document.getElementById('btnGeotag');\
+                    btn.innerHTML = '\x3ci class=\"fas fa-check text-green-500 mr-1\">\x3c\\/i> Lokasi Tersimpan (' + geo + ')';\
+                    btn.classList.replace('text-red-600', 'text-green-600');\
+                }, function(error) {\
+                    document.getElementById('btnGeotag').innerHTML = '\x3ci class=\"fas fa-exclamation-triangle mr-1\">\x3c\\/i> Gagal ambil lokasi. Coba lagi.';\
+                    showMessage('Error Geotag', 'Pastikan izin lokasi (GPS) diaktifkan di browser\/HP Anda.');\
+                });

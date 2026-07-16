@@ -1,0 +1,11 @@
+function saveProduct(id, name, retail, wholesale, stock) {
+  try {
+    if (!id || id.trim() === '') id = "PRD-" + new Date().getTime();
+    const ms = new MasterService();
+    let sheet = ms.getSheet("Products");
+    if (!sheet) {
+       sheet = ms.insertSheet("Products");
+       sheet.appendRow(["ID", "Name", "Retail", "Wholesale", "Stock"]);
+    }
+    
+    let lastRow = sheet.getLastRow();

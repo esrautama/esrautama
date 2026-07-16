@@ -1,0 +1,106 @@
+650:             }
+651:         }
+652:     }
+653: }
+654: 
+655: // --- LOGIN SCREEN ---
+656: @Composable
+657: fun LoginScreen(
+658:     viewModel: SfaViewModel,
+659:     onLoginClick: (String, String, () -> Unit) -> Unit = { _, _, _ -> }
+660: ) {
+661:     var username by remember { mutableStateOf("") }
+662:     var password by remember { mutableStateOf("") }
+663:     var isLoggingIn by remember { mutableStateOf(false) }
+664:     var showUrlSettings by remember { mutableStateOf(false) }
+665:     val context = LocalContext.current
+666: 
+667:     BoxWithConstraints(modifier = Modifier.fillMaxSize().systemBarsPadding().imePadding()) {
+668:         val isLandscape = maxWidth > maxHeight || maxWidth > 600.dp
+669: 
+670:         if (isLandscape) {
+671:             // Web/Tablet Landscape Split View
+672:             Row(
+673:                 modifier = Modifier
+674:                     .fillMaxSize()
+675:                     .background(Color(0xFFF8FAFC)) // Light gray background
+676:             ) {
+677:                 // Left side branding panel
+678:                 Box(
+679:                     modifier = Modifier
+680:                         .weight(1.2f)
+681:                         .fillMaxHeight()
+682:                         .background(
+683:                             brush = Brush.verticalGradient(
+684:                                 colors = listOf(Color(0xFF1E3A8A), Color(0xFF1D4ED8))
+685:                             )
+686:                         ),
+687:                     contentAlignment = Alignment.Center
+688:                 ) {
+689:                     Column(
+690:                         horizontalAlignment = Alignment.CenterHorizontally,
+691:                         verticalArrangement = Arrangement.spacedBy(16.dp),
+692:                         modifier = Modifier.padding(32.dp)
+693:                     ) {
+694:                         Card(
+695:                             colors = CardDefaults.cardColors(containerColor = Color.White),
+696:                             shape = RoundedCornerShape(32.dp),
+697:                             elevation = CardDefaults.cardElevation(defaultElevation = 16.dp),
+698:                             modifier = Modifier
+699:                                 .size(160.dp)
+700:                                 .padding(bottom = 12.dp)
+701:                         ) {
+702:                             Box(
+703:                                 modifier = Modifier.fillMaxSize(),
+704:                                 contentAlignment = Alignment.Center
+705:                             ) {
+706:                                 AsyncImage(
+707:                                     model = "https://res.cloudinary.com/donww7xep/image/upload/v1782804261/ChatGPT_Image_28_Jun_2026_21.47.19_nupxu2.png",
+708:                                     contentDescription = "Logo ESRA UTAMA",
+709:                                     modifier = Modifier
+710:                                         .fillMaxSize()
+711:                                         .padding(16.dp)
+712:                                         .clip(RoundedCornerShape(16.dp)),
+713:                                     contentScale = ContentScale.Fit
+714:                                 )
+715:                             }
+716:                         }
+717:                         Text(
+718:                             text = "ESRA UTAMA SFA",
+719:                             color = Color.White,
+720:                             fontSize = 32.sp,
+721:                             fontWeight = FontWeight.Black,
+722:                             letterSpacing = 1.sp
+723:                         )
+724:                         Text(
+725:                             text = "Sales Force Automation System",
+726:                             color = Color.White.copy(alpha = 0.8f),
+727:                             fontSize = 16.sp,
+728:                             fontWeight = FontWeight.Medium
+729:                         )
+730:                     }
+731:                 }
+732: 
+733:                 // Right side login form
+734:                 Box(
+735:                     modifier = Modifier
+736:                         .weight(1f)
+737:                         .fillMaxHeight(),
+738:                     contentAlignment = Alignment.Center
+739:                 ) {
+740:                     Card(
+741:                         colors = CardDefaults.cardColors(containerColor = Color.White),
+742:                         shape = RoundedCornerShape(24.dp),
+743:                         elevation = CardDefaults.cardElevation(defaultElevation = 8.dp),
+744:                         modifier = Modifier
+745:                             .fillMaxWidth(0.85f)
+746:                             .padding(vertical = 24.dp)
+747:                     ) {
+748:                         Column(
+749:                             modifier = Modifier.padding(32.dp),
+750:                             verticalArrangement = Arrangement.spacedBy(20.dp)
+751:                         ) {
+752:                             Text(
+753:                                 text = "Silakan Masuk",
+754:                                 color = Color(0xFF0F172A),
+755:                                 fontSize = 24.sp,

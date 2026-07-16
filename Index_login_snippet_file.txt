@@ -1,0 +1,61 @@
+Found loginScreen div on line 509 in Index.html
+509:       id="loginScreen"
+510:       class="fixed inset-0 bg-[#0f172a] z-40 hidden items-center justify-center p-4"
+511:     >
+512:       <div class="bg-white p-8 rounded-3xl shadow-2xl w-full max-w-sm fade-in">
+513:         <div class="flex justify-center mb-6">
+514:           <div class="p-2">
+515:             <img
+516:               src="https://res.cloudinary.com/donww7xep/image/upload/v1782804261/ChatGPT_Image_28_Jun_2026_21.47.19_nupxu2.png"
+517:               class="w-24 h-24 object-contain"
+518:               alt="Logo SFA"
+519:             />
+520:           </div>
+521:         </div>
+522:         <h2
+523:           class="text-2xl font-black text-center text-gray-800 mb-6 tracking-tight"
+524:         >
+525:           Login SFA
+526:         </h2>
+527:         <div class="space-y-4">
+528:           <div>
+529:             <label class="block text-xs font-bold text-gray-500 mb-1"
+530:               >USERNAME</label
+531:             >
+532:             <input
+533:               type="text"
+534:               id="username"
+535:               class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 font-medium"
+536:               placeholder="admin"
+537:             />
+538:           </div>
+539:           <div>
+540:             <label class="block text-xs font-bold text-gray-500 mb-1"
+541:               >PASSWORD</label
+542:             >
+543:             <input
+544:               type="password"
+545:               id="password"
+546:               class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 font-medium"
+547:               placeholder="admin123"
+548:             />
+549:           </div>
+550:           <button
+551:             id="btnLogin"
+552:             onclick="handleLogin()"
+553:             class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-xl shadow-lg transition mt-4"
+554:           >
+555:             MASUK
+556:           </button>
+557:         </div>
+558:       </div>
+559:     </div>
+560:     <div
+561:       id="mainContent"
+562:       class="hidden flex-col h-full w-full max-w-md mx-auto bg-gray-50 relative shadow-2xl overflow-hidden transition-all duration-300"
+563:     >
+564:       <nav
+565:         id="mainNav"
+566:         class="glass-nav absolute bottom-0 w-full px-2 py-3 flex justify-between items-center pb-safe z-30 transition-all duration-300"
+567:       >
+568:         <div class="admin-only admin-logo-area hidden">

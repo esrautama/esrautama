@@ -1,0 +1,90 @@
+2841:                                 fontSize = 13.sp,
+2842:                                 fontWeight = FontWeight.Medium
+2843:                             )
+2844:                         }
+2845:                     }
+2846:                 }
+2847:             }
+2848:         }
+2849: 
+2850:         if (currentUser?.role != "Sales") {
+2851:             Spacer(modifier = Modifier.height(16.dp))
+2852: 
+2853:             // Synchronization Audit Logs Card
+2854:             Card(
+2855:                 colors = CardDefaults.cardColors(containerColor = Color.White),
+2856:                 shape = RoundedCornerShape(20.dp),
+2857:                 modifier = Modifier.fillMaxWidth()
+2858:             ) {
+2859:                 Column(
+2860:                     modifier = Modifier.padding(24.dp),
+2861:                     verticalArrangement = Arrangement.spacedBy(16.dp)
+2862:                 ) {
+2863:                     Row(
+2864:                         modifier = Modifier.fillMaxWidth(),
+2865:                         horizontalArrangement = Arrangement.SpaceBetween,
+2866:                         verticalAlignment = Alignment.CenterVertically
+2867:                     ) {
+2868:                         Row(verticalAlignment = Alignment.CenterVertically) {
+2869:                             Icon(
+2870:                                 imageVector = Icons.Default.History,
+2871:                                 contentDescription = null,
+2872:                                 tint = MaterialTheme.colorScheme.primary
+2873:                             )
+2874:                             Spacer(modifier = Modifier.width(8.dp))
+2875:                             Text(
+2876:                                 text = "Log Audit Sinkronisasi",
+2877:                                 fontWeight = FontWeight.Bold,
+2878:                                 fontSize = 16.sp,
+2879:                                 color = MaterialTheme.colorScheme.primary
+2880:                             )
+2881:                         }
+2882:                         if (auditLogs.isNotEmpty()) {
+2883:                             TextButton(onClick = { viewModel.clearSyncAuditLogs() }) {
+2884:                                 Text("Hapus Log", color = MaterialTheme.colorScheme.error, fontSize = 12.sp)
+2885:                             }
+2886:                         }
+2887:                     }
+2888: 
+2889:                     HorizontalDivider()
+2890: 
+2891:                     if (auditLogs.isEmpty()) {
+2892:                         Box(
+2893:                             modifier = Modifier
+2894:                                 .fillMaxWidth()
+2895:                                 .padding(vertical = 24.dp),
+2896:                             contentAlignment = Alignment.Center
+2897:                         ) {
+2898:                             Text(
+2899:                                 text = "Belum ada log sinkronisasi.",
+2900:                                 color = Color.Gray,
+2901:                                 fontSize = 13.sp
+2902:                             )
+2903:                         }
+2904:                     } else {
+2905:                         Column(
+2906:                             modifier = Modifier.fillMaxWidth(),
+2907:                             verticalArrangement = Arrangement.spacedBy(12.dp)
+2908:                         ) {
+2909:                             auditLogs.forEach { log ->
+2910:                                 Card(
+2911:                                     colors = CardDefaults.cardColors(
+2912:                                         containerColor = if (log.result == "Success") Color(0xFFF0FDF4) else Color(0xFFFDF2F2)
+2913:                                     ),
+2914:                                     shape = RoundedCornerShape(12.dp),
+2915:                                     border = BorderStroke(
+2916:                                         width = 1.dp,
+2917:                                         color = if (log.result == "Success") Color(0xFFDCFCE7) else Color(0xFFFDE8E8)
+2918:                                     ),
+2919:                                     modifier = Modifier.fillMaxWidth()
+2920:                                 ) {
+2921:                                     Column(
+2922:                                         modifier = Modifier.padding(12.dp),
+2923:                                         verticalArrangement = Arrangement.spacedBy(6.dp)
+2924:                                     ) {
+2925:                                         Row(
+2926:                                             modifier = Modifier.fillMaxWidth(),
+2927:                                             horizontalArrangement = Arrangement.SpaceBetween,
+2928:                                             verticalAlignment = Alignment.CenterVertically
+2929:                                         ) {
+2930:                                             Text(

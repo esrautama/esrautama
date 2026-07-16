@@ -1,0 +1,391 @@
+650:             }
+651:         }
+652:     }
+653: }
+654: 
+655: // --- LOGIN SCREEN ---
+656: @Composable
+657: fun LoginScreen(
+658:     viewModel: SfaViewModel,
+659:     onLoginClick: (String, String, () -> Unit) -> Unit = { _, _, _ -> }
+660: ) {
+661:     var username by remember { mutableStateOf("") }
+662:     var password by remember { mutableStateOf("") }
+663:     var isLoggingIn by remember { mutableStateOf(false) }
+664:     var showUrlSettings by remember { mutableStateOf(false) }
+665:     val context = LocalContext.current
+666: 
+667:     BoxWithConstraints(modifier = Modifier.fillMaxSize().systemBarsPadding().imePadding()) {
+668:         val isLandscape = maxWidth > maxHeight || maxWidth > 600.dp
+669: 
+670:         if (isLandscape) {
+671:             // Web/Tablet Landscape Split View
+672:             Row(
+673:                 modifier = Modifier
+674:                     .fillMaxSize()
+675:                     .background(Color(0xFFF8FAFC)) // Light gray background
+676:             ) {
+677:                 // Left side branding panel
+678:                 Box(
+679:                     modifier = Modifier
+680:                         .weight(1.2f)
+681:                         .fillMaxHeight()
+682:                         .background(
+683:                             brush = Brush.verticalGradient(
+684:                                 colors = listOf(Color(0xFF1E3A8A), Color(0xFF1D4ED8))
+685:                             )
+686:                         ),
+687:                     contentAlignment = Alignment.Center
+688:                 ) {
+689:                     Column(
+690:                         horizontalAlignment = Alignment.CenterHorizontally,
+691:                         verticalArrangement = Arrangement.spacedBy(16.dp),
+692:                         modifier = Modifier.padding(32.dp)
+693:                     ) {
+694:                         Card(
+695:                             colors = CardDefaults.cardColors(containerColor = Color.White),
+696:                             shape = RoundedCornerShape(32.dp),
+697:                             elevation = CardDefaults.cardElevation(defaultElevation = 16.dp),
+698:                             modifier = Modifier
+699:                                 .size(160.dp)
+700:                                 .padding(bottom = 12.dp)
+701:                         ) {
+702:                             Box(
+703:                                 modifier = Modifier.fillMaxSize(),
+704:                                 contentAlignment = Alignment.Center
+705:                             ) {
+706:                                 AsyncImage(
+707:                                     model = "https://res.cloudinary.com/donww7xep/image/upload/v1782804261/ChatGPT_Image_28_Jun_2026_21.47.19_nupxu2.png",
+708:                                     contentDescription = "Logo ESRA UTAMA",
+709:                                     modifier = Modifier
+710:                                         .fillMaxSize()
+711:                                         .padding(16.dp)
+712:                                         .clip(RoundedCornerShape(16.dp)),
+713:                                     contentScale = ContentScale.Fit
+714:                                 )
+715:                             }
+716:                         }
+717:                         Text(
+718:                             text = "ESRA UTAMA SFA",
+719:                             color = Color.White,
+720:                             fontSize = 32.sp,
+721:                             fontWeight = FontWeight.Black,
+722:                             letterSpacing = 1.sp
+723:                         )
+724:                         Text(
+725:                             text = "Sales Force Automation System",
+726:                             color = Color.White.copy(alpha = 0.8f),
+727:                             fontSize = 16.sp,
+728:                             fontWeight = FontWeight.Medium
+729:                         )
+730:                     }
+731:                 }
+732: 
+733:                 // Right side login form
+734:                 Box(
+735:                     modifier = Modifier
+736:                         .weight(1f)
+737:                         .fillMaxHeight(),
+738:                     contentAlignment = Alignment.Center
+739:                 ) {
+740:                     Card(
+741:                         colors = CardDefaults.cardColors(containerColor = Color.White),
+742:                         shape = RoundedCornerShape(24.dp),
+743:                         elevation = CardDefaults.cardElevation(defaultElevation = 8.dp),
+744:                         modifier = Modifier
+745:                             .fillMaxWidth(0.85f)
+746:                             .padding(vertical = 24.dp)
+747:                     ) {
+748:                         Column(
+749:                             modifier = Modifier.padding(32.dp),
+750:                             verticalArrangement = Arrangement.spacedBy(20.dp)
+751:                         ) {
+752:                             Text(
+753:                                 text = "Silakan Masuk",
+754:                                 color = Color(0xFF0F172A),
+755:                                 fontSize = 24.sp,
+756:                                 fontWeight = FontWeight.Bold
+757:                             )
+758: 
+759:                             OutlinedTextField(
+760:                                 value = username,
+761:                                 onValueChange = { username = it },
+762:                                 label = { Text("Username") },
+763:                                 leadingIcon = { Icon(Icons.Default.Person, contentDescription = null) },
+764:                                 modifier = Modifier
+765:                                     .fillMaxWidth()
+766:                                     .testTag("username_input"),
+767:                                 singleLine = true,
+768:                                 enabled = !isLoggingIn,
+769:                                 colors = OutlinedTextFieldDefaults.colors(
+770:                                     focusedBorderColor = Color(0xFF3B82F6),
+771:                                     focusedLabelColor = Color(0xFF3B82F6)
+772:                                 )
+773:                             )
+774: 
+775:                             OutlinedTextField(
+776:                                 value = password,
+777:                                 onValueChange = { password = it },
+778:                                 label = { Text("Password") },
+779:                                 leadingIcon = { Icon(Icons.Default.Lock, contentDescription = null) },
+780:                                 visualTransformation = PasswordVisualTransformation(),
+781:                                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password, imeAction = androidx.compose.ui.text.input.ImeAction.Done),
+782:                                 keyboardActions = androidx.compose.foundation.text.KeyboardActions(onDone = { 
+783:                                     if (username.isNotBlank() && password.isNotBlank()) {
+784:                                         isLoggingIn = true
+785:                                         onLoginClick(username, password) { isLoggingIn = false }
+786:                                     }
+787:                                 }),
+788:                                 modifier = Modifier
+789:                                     .fillMaxWidth()
+790:                                     .testTag("password_input"),
+791:                                 singleLine = true,
+792:                                 enabled = !isLoggingIn,
+793:                                 colors = OutlinedTextFieldDefaults.colors(
+794:                                     focusedBorderColor = Color(0xFF3B82F6),
+795:                                     focusedLabelColor = Color(0xFF3B82F6)
+796:                                 )
+797:                             )
+798: 
+799:                             Button(
+800:                                 onClick = { 
+801:                                     if (username.isBlank() || password.isBlank()) {
+802:                                         Toast.makeText(context, "Username dan Password harus diisi", Toast.LENGTH_SHORT).show()
+803:                                         return@Button
+804:                                     }
+805:                                     isLoggingIn = true
+806:                                     onLoginClick(username, password) { isLoggingIn = false }
+807:                                 },
+808:                                 colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF1E3A8A)),
+809:                                 shape = RoundedCornerShape(12.dp),
+810:                                 enabled = !isLoggingIn,
+811:                                 modifier = Modifier
+812:                                     .fillMaxWidth()
+813:                                     .height(54.dp)
+814:                                     .testTag("login_button")
+815:                             ) {
+816:                                 if (isLoggingIn) {
+817:                                     CircularProgressIndicator(
+818:                                         color = Color.White,
+819:                                         modifier = Modifier.size(24.dp),
+820:                                         strokeWidth = 2.dp
+821:                                     )
+822:                                 } else {
+823:                                     Text(
+824:                                         text = "MASUK",
+825:                                         fontSize = 16.sp,
+826:                                         fontWeight = FontWeight.Bold,
+827:                                         color = Color.White
+828:                                     )
+829:                                 }
+830:                             }
+831: 
+832:                             Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
+833:                                 Text(
+834:                                     text = "v${com.example.BuildConfig.VERSION_NAME} (Hybrid Offline Support)",
+835:                                     color = Color.Gray.copy(alpha = 0.5f),
+836:                                     fontSize = 10.sp,
+837:                                     // PERBAIKAN: gear icon pengaturan URL server dihapus dari tampilan
+838:                                     // supaya tidak terlihat/terpencet sales awam. Akses hanya lewat
+839:                                     // long-press (tahan) teks versi ini, khusus untuk admin/teknisi.
+840:                                     modifier = Modifier.pointerInput(Unit) {
+841:                                         detectTapGestures(onLongPress = { showUrlSettings = true })
+842:                                     }
+843:                                 )
+844:                             }
+845:                         }
+846:                     }
+847:                 }
+848:             }
+849:         } else {
+850:             // Portrait layout (original)
+851:             Box(
+852:                 modifier = Modifier
+853:                     .fillMaxSize()
+854:                     .background(
+855:                         brush = Brush.verticalGradient(
+856:                             colors = listOf(Color(0xFF1E3A8A), Color(0xFF1D4ED8))
+857:                         )
+858:                     ),
+859:                 contentAlignment = Alignment.Center
+860:             ) {
+861:                 Column(
+862:                     modifier = Modifier
+863:                         .fillMaxWidth()
+864:                         .padding(24.dp)
+865:                         .verticalScroll(rememberScrollState()),
+866:                     horizontalAlignment = Alignment.CenterHorizontally,
+867:                     verticalArrangement = Arrangement.spacedBy(16.dp)
+868:                 ) {
+869:                     // Animated/Polished logo card
+870:                     Card(
+871:                         colors = CardDefaults.cardColors(containerColor = Color.White),
+872:                         shape = RoundedCornerShape(32.dp),
+873:                         elevation = CardDefaults.cardElevation(defaultElevation = 16.dp),
+874:                         modifier = Modifier
+875:                             .size(140.dp)
+876:                             .padding(bottom = 12.dp)
+877:                     ) {
+878:                         Box(
+879:                             modifier = Modifier.fillMaxSize(),
+880:                             contentAlignment = Alignment.Center
+881:                         ) {
+882:                             AsyncImage(
+883:                                 model = "https://res.cloudinary.com/donww7xep/image/upload/v1782804261/ChatGPT_Image_28_Jun_2026_21.47.19_nupxu2.png",
+884:                                 contentDescription = "Logo ESRA UTAMA",
+885:                                 modifier = Modifier
+886:                                     .fillMaxSize()
+887:                                     .padding(12.dp)
+888:                                     .clip(RoundedCornerShape(16.dp)),
+889:                                 contentScale = ContentScale.Fit
+890:                             )
+891:                         }
+892:                     }
+893: 
+894:                     Text(
+895:                         text = "ESRA UTAMA SFA",
+896:                         color = Color.White,
+897:                         fontSize = 26.sp,
+898:                         fontWeight = FontWeight.Black,
+899:                         letterSpacing = 0.5.sp
+900:                     )
+901:                     Text(
+902:                         text = "Sales Force Automation System",
+903:                         color = Color.White.copy(alpha = 0.7f),
+904:                         fontSize = 12.sp,
+905:                         fontWeight = FontWeight.Medium,
+906:                         modifier = Modifier.padding(bottom = 16.dp)
+907:                     )
+908: 
+909:                     // Input credentials card
+910:                     Card(
+911:                         colors = CardDefaults.cardColors(containerColor = Color.White),
+912:                         shape = RoundedCornerShape(24.dp),
+913:                         elevation = CardDefaults.cardElevation(defaultElevation = 8.dp),
+914:                         modifier = Modifier.fillMaxWidth()
+915:                     ) {
+916:                         Column(
+917:                             modifier = Modifier.padding(24.dp),
+918:                             verticalArrangement = Arrangement.spacedBy(16.dp)
+919:                         ) {
+920:                             Text(
+921:                                 text = "Silakan Masuk",
+922:                                 color = Color(0xFF0F172A),
+923:                                 fontSize = 18.sp,
+924:                                 fontWeight = FontWeight.Bold
+925:                             )
+926: 
+927:                             OutlinedTextField(
+928:                                 value = username,
+929:                                 onValueChange = { username = it },
+930:                                 label = { Text("Username") },
+931:                                 leadingIcon = { Icon(Icons.Default.Person, contentDescription = null) },
+932:                                 modifier = Modifier
+933:                                     .fillMaxWidth()
+934:                                     .testTag("username_input"),
+935:                                 singleLine = true,
+936:                                 enabled = !isLoggingIn,
+937:                                 colors = OutlinedTextFieldDefaults.colors(
+938:                                     focusedBorderColor = Color(0xFF3B82F6),
+939:                                     focusedLabelColor = Color(0xFF3B82F6)
+940:                                 )
+941:                             )
+942: 
+943:                             OutlinedTextField(
+944:                                 value = password,
+945:                                 onValueChange = { password = it },
+946:                                 label = { Text("Password") },
+947:                                 leadingIcon = { Icon(Icons.Default.Lock, contentDescription = null) },
+948:                                 visualTransformation = PasswordVisualTransformation(),
+949:                                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password, imeAction = androidx.compose.ui.text.input.ImeAction.Done),
+950:                                 keyboardActions = androidx.compose.foundation.text.KeyboardActions(onDone = { 
+951:                                     if (username.isNotBlank() && password.isNotBlank()) {
+952:                                         isLoggingIn = true
+953:                                         onLoginClick(username, password) { isLoggingIn = false }
+954:                                     }
+955:                                 }),
+956:                                 modifier = Modifier
+957:                                     .fillMaxWidth()
+958:                                     .testTag("password_input"),
+959:                                 singleLine = true,
+960:                                 enabled = !isLoggingIn,
+961:                                 colors = OutlinedTextFieldDefaults.colors(
+962:                                     focusedBorderColor = Color(0xFF3B82F6),
+963:                                     focusedLabelColor = Color(0xFF3B82F6)
+964:                                 )
+965:                             )
+966: 
+967:                             Button(
+968:                                 onClick = { 
+969:                                     if (username.isBlank() || password.isBlank()) {
+970:                                         Toast.makeText(context, "Username dan Password harus diisi", Toast.LENGTH_SHORT).show()
+971:                                         return@Button
+972:                                     }
+973:                                     isLoggingIn = true
+974:                                     onLoginClick(username, password) { isLoggingIn = false }
+975:                                 },
+976:                                 colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF1E3A8A)),
+977:                                 shape = RoundedCornerShape(12.dp),
+978:                                 enabled = !isLoggingIn,
+979:                                 modifier = Modifier
+980:                                     .fillMaxWidth()
+981:                                     .height(50.dp)
+982:                                     .testTag("login_button")
+983:                             ) {
+984:                                 if (isLoggingIn) {
+985:                                     CircularProgressIndicator(
+986:                                         color = Color.White,
+987:                                         modifier = Modifier.size(24.dp),
+988:                                         strokeWidth = 2.dp
+989:                                     )
+990:                                 } else {
+991:                                     Text(
+992:                                         text = "MASUK",
+993:                                         fontSize = 14.sp,
+994:                                         fontWeight = FontWeight.Bold,
+995:                                         color = Color.White
+996:                                     )
+997:                                 }
+998:                             }
+999:                         }
+1000:                     }
+1001: 
+1002:                     Text(
+1003:                         text = "v${com.example.BuildConfig.VERSION_NAME} (Hybrid Offline Support)",
+1004:                         color = Color.White.copy(alpha = 0.5f),
+1005:                         fontSize = 10.sp,
+1006:                         fontWeight = FontWeight.Normal,
+1007:                         // PERBAIKAN: gear icon pengaturan URL server dihapus dari tampilan
+1008:                         // supaya tidak terlihat/terpencet sales awam. Akses hanya lewat
+1009:                         // long-press (tahan) teks versi ini, khusus untuk admin/teknisi.
+1010:                         modifier = Modifier
+1011:                             .padding(top = 16.dp)
+1012:                             .pointerInput(Unit) {
+1013:                                 detectTapGestures(onLongPress = { showUrlSettings = true })
+1014:                             }
+1015:                     )
+1016:                 }
+1017:             }
+1018:         }
+1019: 
+1020:         if (showUrlSettings) {
+1021:             LoginUrlSettingsDialog(
+1022:                 viewModel = viewModel,
+1023:                 onDismiss = { showUrlSettings = false }
+1024:             )
+1025:         }
+1026:     }
+1027: }
+1028: 
+1029: @OptIn(androidx.compose.material3.ExperimentalMaterial3Api::class)
+1030: // --- SALES TAB COMPONENT ---
+1031: @Composable
+1032: fun SalesTab(
+1033:     viewModel: SfaViewModel,
+1034:     onCheckoutClick: () -> Unit,
+1035:     onNoOrderClick: () -> Unit
+1036: ) {
+1037:     val selectedOutlet by viewModel.selectedOutlet.collectAsStateWithLifecycle()
+1038:     val currentOutletType by viewModel.currentOutletType.collectAsStateWithLifecycle()
+1039:     val salesOutletSearchQuery by viewModel.salesOutletSearchQuery.collectAsStateWithLifecycle()
+1040:     val outletsList by viewModel.outletsList.collectAsStateWithLifecycle()

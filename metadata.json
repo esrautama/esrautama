@@ -1,0 +1,6 @@
+{
+  "name": "ESRA UTAMA SFA",
+  "description": "Aplikasi Sales Force Automation (SFA) untuk Esra Utama, mendukung pencatatan penjualan, stock, rute outlet, dan cetak struk Bluetooth.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

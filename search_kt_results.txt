@@ -1,0 +1,9 @@
+543: fun LoginUrlSettingsDialog(
+FUNCTION 543: fun LoginUrlSettingsDialog(
+FUNCTION 657: fun LoginScreen(
+664:     var showUrlSettings by remember { mutableStateOf(false) }
+841:                                         detectTapGestures(onLongPress = { showUrlSettings = true })
+1013:                                 detectTapGestures(onLongPress = { showUrlSettings = true })
+1020:         if (showUrlSettings) {
+1021:             LoginUrlSettingsDialog(
+1023:                 onDismiss = { showUrlSettings = false }

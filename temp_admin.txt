@@ -1,0 +1,117 @@
+fun AdminPanelTab(
+    viewModel: SfaViewModel,
+    onAddDataClick: (String) -> Unit,
+    onEditDataClick: (String, Int) -> Unit,
+    onImportCsvClick: (String) -> Unit,
+    onPreviewReceiptClick: () -> Unit
+) {
+    val adminCurrentTab by viewModel.adminCurrentTab.collectAsStateWithLifecycle()
+    val users by viewModel.usersList.collectAsStateWithLifecycle()
+    val products by viewModel.productsList.collectAsStateWithLifecycle()
+    val logs by viewModel.warehouseLogsList.collectAsStateWithLifecycle()
+    val outlets by viewModel.outletsList.collectAsStateWithLifecycle()
+
+    val logFilterStart by viewModel.logFilterStartDate.collectAsStateWithLifecycle()
+    val logFilterEnd by viewModel.logFilterEndDate.collectAsStateWithLifecycle()
+
+    var showDatePickerFor by remember { mutableStateOf<String?>(null) } // null, "Start", "End"
+
+    Row(
+        modifier = Modifier.fillMaxSize()
+    ) {
+        // Web Console Sidebar (Left Panel)
+        Column(
+            modifier = Modifier
+                .width(180.dp)
+                .fillMaxHeight()
+                .background(Color(0xFF1E293B)) // Web dark slate sidebar
+                .padding(vertical = 12.dp, horizontal = 10.dp)
+        ) {
+            // Console Header
+            Row(
+                modifier = Modifier.padding(horizontal = 8.dp, vertical = 10.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(8.dp)
+            ) {
+                Icon(
+                    Icons.Default.Shield,
+                    contentDescription = "Admin",
+                    tint = Color(0xFF38BDF8), // Radiant light blue accent
+                    modifier = Modifier.size(20.dp)
+                )
+                Text(
+                    text = "SFA CONSOLE",
+                    fontWeight = FontWeight.Black,
+                    fontSize = 13.sp,
+                    color = Color.White,
+                    letterSpacing = 1.sp
+                )
+            }
+
+            Spacer(modifier = Modifier.height(16.dp))
+
+            // Sidebar Menu Tabs
+            val tabsList = listOf(
+                "Users" to Icons.Default.Person,
+                "Products" to Icons.Default.Inventory2,
+                "History Transaksi" to Icons.Default.Receipt,
+                "Stock Gudang" to Icons.Default.History,
+                "Stock Stokis" to Icons.Default.Layers,
+                "Inject Outlets" to Icons.Default.Storefront,
+                "Inject Stock" to Icons.Default.Bolt,
+                "Log Gudang" to Icons.Default.AssignmentLate,
+                "Settings" to Icons.Default.Settings
+            )
+
+            tabsList.forEach { (tab, icon) ->
+                val isSelected = adminCurrentTab == tab
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(vertical = 4.dp)
+                        .background(
+                            color = if (isSelected) Color(0xFF334155) else Color.Transparent,
+                            shape = RoundedCornerShape(8.dp)
+                        )
+                        .clickable { viewModel.setAdminTab(tab) }
+                        .padding(horizontal = 10.dp, vertical = 8.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(8.dp)
+                ) {
+                    Icon(
+                        imageVector = icon,
+                        contentDescription = tab,
+                        tint = if (isSelected) Color(0xFF38BDF8) else Color(0xFF94A3B8),
+                        modifier = Modifier.size(16.dp)
+                    )
+                    Text(
+                        text = tab,
+                        fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Medium,
+                        fontSize = 11.sp,
+                        color = if (isSelected) Color.White else Color(0xFFCBD5E1)
+                    )
+                }
+            }
+        }
+
+        // Web Console Content (Right Panel)
+        Column(
+            modifier = Modifier
+                .weight(1f)
+                .fillMaxHeight()
+                .background(Color(0xFFF1F5F9)) // soft grey backdrop
+                .padding(16.dp)
+        ) {
+            // Web Dashboard Stat widgets
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(bottom = 12.dp),
+                horizontalArrangement = Arrangement.spacedBy(10.dp)
+            ) {
+                // Widget 1: Users
+                Card(
+                    modifier = Modifier.weight(1f),
+                    colors = CardDefaults.cardColors(containerColor = Color.White),
+                    shape = RoundedCornerShape(10.dp),
+                    border = BorderStroke(0.5.dp, Color(0xFFE2E8F0))
